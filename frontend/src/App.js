@@ -176,7 +176,7 @@ const Navigation = ({ scrolled, mobileMenuOpen, setMobileMenuOpen }) => {
 const HeroSection = () => {
   return (
     <section className="hero-section" data-testid="hero-section">
-      <div className="relative w-full flex items-center justify-center px-6 py-20 md:py-32">
+      <div className="relative w-full flex items-center justify-center px-6 py-8 md:py-12">
         <img
           src={HERO_BANNER}
           alt="The Confident Footballer"
@@ -184,7 +184,7 @@ const HeroSection = () => {
           data-testid="hero-banner"
         />
       </div>
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 animate-bounce">
         <a href="#about" className="text-white/60 hover:text-white transition-colors duration-300" data-testid="scroll-indicator">
           <ArrowRight size={24} className="rotate-90" />
         </a>
