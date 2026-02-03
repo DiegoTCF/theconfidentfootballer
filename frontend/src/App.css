@@ -1,34 +1,190 @@
-.App-logo {
-    height: 40vmin;
-    pointer-events: none;
+/* Navigation */
+.nav-sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid #E5E7EB;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-        animation: App-logo-spin infinite 20s linear;
+.nav-sticky.scrolled {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* Hero Section */
+.hero-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0A0A0A;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-banner {
+    max-width: 900px;
+    width: 100%;
+    animation: fadeInUp 1s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
 
-.App-header {
-    background-color: #0f0f10;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
+/* Section Animations */
+.section-animate {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-400 { animation-delay: 0.4s; }
+
+/* Button Styles */
+.btn-primary {
+    background-color: #D92323;
+    color: white;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    padding: 1rem 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 14px 0 rgba(217, 35, 35, 0.3);
+}
+
+.btn-primary:hover {
+    background-color: #b91c1c;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px 0 rgba(217, 35, 35, 0.4);
+}
+
+.btn-secondary {
+    background-color: white;
+    border: 2px solid #0A0A0A;
+    color: #0A0A0A;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    padding: 1rem 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: #0A0A0A;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Service Cards */
+.service-card {
+    background-color: white;
+    border: 1px solid #E5E7EB;
+    padding: 2rem;
+    transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 0;
+    background-color: #D92323;
+    transition: height 0.3s ease;
+}
+
+.service-card:hover {
+    border-color: #D92323;
+    transform: translateY(-4px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.service-card:hover::before {
+    height: 100%;
+}
+
+/* Testimonial Cards */
+.testimonial-card {
+    background-color: #F9FAFB;
+    padding: 2rem;
+    border-left: 4px solid #D92323;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+/* Diego Section */
+.diego-section {
+    background-color: #F5F5F5;
+}
+
+/* Footer */
+.footer {
+    background-color: #0A0A0A;
     color: white;
 }
 
-.App-link {
-    color: #61dafb;
+/* Watermark Numbers */
+.watermark-number {
+    position: absolute;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 15rem;
+    font-weight: 800;
+    color: rgba(217, 35, 35, 0.05);
+    line-height: 1;
+    pointer-events: none;
+    user-select: none;
 }
 
-@keyframes App-logo-spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+/* Quote Icon */
+.quote-icon {
+    color: #D92323;
+    opacity: 0.3;
+}
+
+/* Mobile Navigation */
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    z-index: 100;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+}
+
+.mobile-menu.open {
+    transform: translateX(0);
+}
+
+/* Red accent line */
+.red-accent-line {
+    width: 60px;
+    height: 4px;
+    background-color: #D92323;
 }

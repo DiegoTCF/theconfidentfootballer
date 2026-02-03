@@ -1,52 +1,520 @@
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import "@/App.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import axios from "axios";
+import { Menu, X, BookOpen, Users, FileText, Star, Quote, ArrowRight, Trophy, Brain, Target } from "lucide-react";
 
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
-const API = `${BACKEND_URL}/api`;
+// Constants
+const HERO_BANNER = "https://customer-assets.emergentagent.com/job_31770e76-de7f-4d90-b907-c512e37565a9/artifacts/yqwxs7zq_The%20confident%20footballer%20banner%20design.png";
 
-const Home = () => {
-  const helloWorldApi = async () => {
-    try {
-      const response = await axios.get(`${API}/`);
-      console.log(response.data.message);
-    } catch (e) {
-      console.error(e, `errored out requesting / api`);
-    }
-  };
+const SERVICES = [
+  {
+    id: "online-course",
+    title: "Online Course",
+    description: "Comprehensive mindset training modules accessible anywhere, anytime. Transform your mental game with our proven techniques.",
+    link: "https://www.youthfootballer.com/offers/FpedL4Pg/checkout",
+    cta: "Enroll Now",
+    icon: BookOpen
+  },
+  {
+    id: "mentorship",
+    title: "Individual Mentorship",
+    description: "1-on-1 coaching sessions tailored to your specific goals and challenges. Personal guidance for maximum impact.",
+    link: "https://forms.gle/f18mTdsL4seLQwcE7",
+    cta: "Apply for Mentorship",
+    icon: Users
+  },
+  {
+    id: "ebook",
+    title: "The Ebook",
+    description: "Essential reading for players and parents. The blueprint to building unshakeable confidence on the pitch.",
+    link: "https://www.youthfootballer.com/offers/vvS23JNp/checkout",
+    cta: "Get the Guide",
+    icon: FileText
+  }
+];
 
-  useEffect(() => {
-    helloWorldApi();
-  }, []);
+const TESTIMONIALS = [
+  {
+    id: 1,
+    quote: "My son's confidence on the pitch has completely transformed. He used to hesitate during games, but now he plays with real purpose and belief.",
+    parent: "Sarah M.",
+    player: "Parent of James, U14",
+    image: "https://images.unsplash.com/photo-1674941136150-aa2f2df3e128?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1ODR8MHwxfHNlYXJjaHw0fHx5b3VuZyUyMHNvY2NlciUyMHBsYXllciUyMHRyYWluaW5nfGVufDB8fHx8MTc3MDEzNzA4NXww&ixlib=rb-4.1.0&q=85"
+  },
+  {
+    id: 2,
+    quote: "The mentorship programme was a game-changer. Diego understood exactly what my daughter needed to overcome her performance anxiety.",
+    parent: "Michael T.",
+    player: "Parent of Emma, U16",
+    image: "https://images.unsplash.com/photo-1769383924825-44706af97281?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1ODR8MHwxfHNlYXJjaHwzfHx5b3VuZyUyMHNvY2NlciUyMHBsYXllciUyMHRyYWluaW5nfGVufDB8fHx8MTc3MDEzNzA4NXww&ixlib=rb-4.1.0&q=85"
+  },
+  {
+    id: 3,
+    quote: "We've tried other programmes before, but nothing compares to The Confident Footballer. The results speak for themselves.",
+    parent: "Jennifer K.",
+    player: "Parent of Lucas, U13",
+    image: "https://images.unsplash.com/photo-1554072127-1b7d6bac4432?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzd8MHwxfHNlYXJjaHwyfHxzb2NjZXIlMjBjb2FjaCUyMHRhbGtpbmclMjB0byUyMHBsYXllcnxlbnwwfHx8fDE3NzAxMzcwOTF8MA&ixlib=rb-4.1.0&q=85"
+  },
+  {
+    id: 4,
+    quote: "The online course gave our son practical tools he uses every match. His coaches have noticed a huge difference in his composure.",
+    parent: "David R.",
+    player: "Parent of Marcus, U15",
+    image: "https://images.unsplash.com/photo-1638029851126-8f56dee1dbe6?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzd8MHwxfHNlYXJjaHwzfHxzb2NjZXIlMjBjb2FjaCUyMHRhbGtpbmclMjB0byUyMHBsYXllcnxlbnwwfHx8fDE3NzAxMzcwOTF8MA&ixlib=rb-4.1.0&q=85"
+  },
+  {
+    id: 5,
+    quote: "Worth every penny. My daughter went from sitting on the bench to starting every game. The mental shift was incredible.",
+    parent: "Amanda L.",
+    player: "Parent of Sophie, U14",
+    image: "https://images.unsplash.com/photo-1550378492-4903c3e172a4?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzd8MHwxfHNlYXJjaHw0fHxzb2NjZXIlMjBjb2FjaCUyMHRhbGtpbmclMjB0byUyMHBsYXllcnxlbnwwfHx8fDE3NzAxMzcwOTF8MA&ixlib=rb-4.1.0&q=85"
+  },
+  {
+    id: 6,
+    quote: "Diego's ebook was the perfect starting point. Simple, actionable advice that we could implement immediately. Highly recommend!",
+    parent: "Robert P.",
+    player: "Parent of Oliver, U12",
+    image: "https://images.unsplash.com/photo-1761225092045-698d1c4a9f43?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1ODR8MHwxfHNlYXJjaHwxfHx5b3VuZyUyMHNvY2NlciUyMHBsYXllciUyMHRyYWluaW5nfGVufDB8fHx8MTc3MDEzNzA4NXww&ixlib=rb-4.1.0&q=85"
+  }
+];
+
+const DIEGO_IMAGE = "https://images.unsplash.com/photo-1561701202-64e5f6aa443f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzd8MHwxfHNlYXJjaHwxfHxzb2NjZXIlMjBjb2FjaCUyMHRhbGtpbmclMjB0byUyMHBsYXllcnxlbnwwfHx8fDE3NzAxMzcwOTF8MA&ixlib=rb-4.1.0&q=85";
+
+// Navigation Component
+const Navigation = ({ scrolled, mobileMenuOpen, setMobileMenuOpen }) => {
+  const navLinks = [
+    { name: "About", href: "#about" },
+    { name: "Services", href: "#services" },
+    { name: "Testimonials", href: "#testimonials" },
+    { name: "Diego", href: "#diego" }
+  ];
 
   return (
-    <div>
-      <header className="App-header">
-        <a
-          className="App-link"
-          href="https://emergent.sh"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img src="https://avatars.githubusercontent.com/in/1201222?s=120&u=2686cf91179bbafbc7a71bfbc43004cf9ae1acea&v=4" />
-        </a>
-        <p className="mt-5">Building something incredible ~!</p>
-      </header>
-    </div>
+    <>
+      <nav className={`nav-sticky ${scrolled ? 'scrolled' : ''}`} data-testid="navigation">
+        <div className="max-w-7xl mx-auto px-6 lg:px-12">
+          <div className="flex items-center justify-between h-16 md:h-20">
+            {/* Logo */}
+            <a href="#" className="flex items-center" data-testid="nav-logo">
+              <span className="font-bold text-xl md:text-2xl tracking-tight" style={{ fontFamily: 'Barlow Condensed, sans-serif' }}>
+                <span className="text-[#0A0A0A]">THE </span>
+                <span className="text-[#D92323]">CONFIDENT</span>
+                <span className="text-[#0A0A0A]"> FOOTBALLER</span>
+              </span>
+            </a>
+
+            {/* Desktop Navigation */}
+            <div className="hidden md:flex items-center gap-8">
+              {navLinks.map((link) => (
+                <a
+                  key={link.name}
+                  href={link.href}
+                  className="text-[#0A0A0A] hover:text-[#D92323] font-medium transition-colors duration-300 uppercase text-sm tracking-wider"
+                  style={{ fontFamily: 'Barlow Condensed, sans-serif' }}
+                  data-testid={`nav-link-${link.name.toLowerCase()}`}
+                >
+                  {link.name}
+                </a>
+              ))}
+              <a
+                href="#services"
+                className="btn-primary text-sm"
+                data-testid="nav-cta"
+              >
+                Get Started
+              </a>
+            </div>
+
+            {/* Mobile Menu Button */}
+            <button
+              className="md:hidden p-2"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              data-testid="mobile-menu-button"
+            >
+              {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
+        </div>
+      </nav>
+
+      {/* Mobile Menu */}
+      <div className={`mobile-menu ${mobileMenuOpen ? 'open' : ''}`} data-testid="mobile-menu">
+        <div className="flex flex-col items-center justify-center h-full gap-8">
+          <button
+            className="absolute top-4 right-4 p-2"
+            onClick={() => setMobileMenuOpen(false)}
+            data-testid="mobile-menu-close"
+          >
+            <X size={24} />
+          </button>
+          {navLinks.map((link) => (
+            <a
+              key={link.name}
+              href={link.href}
+              className="text-2xl font-bold uppercase tracking-wider hover:text-[#D92323] transition-colors duration-300"
+              style={{ fontFamily: 'Barlow Condensed, sans-serif' }}
+              onClick={() => setMobileMenuOpen(false)}
+              data-testid={`mobile-nav-link-${link.name.toLowerCase()}`}
+            >
+              {link.name}
+            </a>
+          ))}
+          <a
+            href="#services"
+            className="btn-primary mt-4"
+            onClick={() => setMobileMenuOpen(false)}
+            data-testid="mobile-nav-cta"
+          >
+            Get Started
+          </a>
+        </div>
+      </div>
+    </>
   );
 };
 
+// Hero Section
+const HeroSection = () => {
+  return (
+    <section className="hero-section" data-testid="hero-section">
+      <div className="relative w-full flex items-center justify-center px-6 py-20 md:py-32">
+        <img
+          src={HERO_BANNER}
+          alt="The Confident Footballer"
+          className="hero-banner"
+          data-testid="hero-banner"
+        />
+      </div>
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <a href="#about" className="text-white/60 hover:text-white transition-colors duration-300" data-testid="scroll-indicator">
+          <ArrowRight size={24} className="rotate-90" />
+        </a>
+      </div>
+    </section>
+  );
+};
+
+// About Section
+const AboutSection = () => {
+  return (
+    <section id="about" className="py-20 md:py-32 px-6 lg:px-12 bg-white relative overflow-hidden" data-testid="about-section">
+      {/* Watermark */}
+      <span className="watermark-number absolute -left-10 top-0">01</span>
+      
+      <div className="max-w-7xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-12 lg:gap-20 items-center">
+          {/* Content */}
+          <div className="relative z-10">
+            <span className="text-sm font-medium tracking-widest uppercase text-[#D92323] mb-4 block" style={{ fontFamily: 'Barlow Condensed, sans-serif' }}>
+              About The Programme
+            </span>
+            <h2 className="text-4xl md:text-5xl font-bold tracking-tight uppercase text-[#0A0A0A] mb-6" style={{ fontFamily: 'Barlow Condensed, sans-serif' }}>
+              Build Unshakeable <span className="text-[#D92323]">Confidence</span> on the Pitch
+            </h2>
+            <div className="red-accent-line mb-6"></div>
+            <p className="text-base md:text-lg leading-relaxed text-gray-600 mb-6">
+              The Confident Footballer is a comprehensive mindset programme designed specifically for young footballers who want to unlock their full potential. We help players develop the mental strength needed to perform under pressure, bounce back from setbacks, and play with courage and consistency.
+            </p>
+            <p className="text-base md:text-lg leading-relaxed text-gray-600 mb-8">
+              Our proven methodology combines sports psychology principles with practical techniques that young players can apply immediately. Whether your child struggles with pre-match nerves, fear of failure, or inconsistent performances, we have the tools to help them thrive.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <a href="#services" className="btn-primary inline-flex items-center justify-center gap-2" data-testid="about-cta">
+                Explore Our Services <ArrowRight size={18} />
+              </a>
+            </div>
+          </div>
+
+          {/* Image Grid */}
+          <div className="relative">
+            <div className="grid grid-cols-2 gap-4">
+              <div className="space-y-4">
+                <div className="bg-[#D92323] p-6 text-white">
+                  <Trophy size={32} className="mb-4" />
+                  <h4 className="font-bold text-xl uppercase mb-2" style={{ fontFamily: 'Barlow Condensed, sans-serif' }}>Confidence</h4>
+                  <p className="text-sm opacity-90">Play with self-belief</p>
+                </div>
+                <img
+                  src="https://images.unsplash.com/photo-1761225092045-698d1c4a9f43?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1ODR8MHwxfHNlYXJjaHwxfHx5b3VuZyUyMHNvY2NlciUyMHBsYXllciUyMHRyYWluaW5nfGVufDB8fHx8MTc3MDEzNzA4NXww&ixlib=rb-4.1.0&q=85"
+                  alt="Young footballer training"
+                  className="w-full h-48 object-cover"
+                  data-testid="about-image-1"
+                />
+              </div>
+              <div className="space-y-4 mt-8">
+                <img
+                  src="https://images.unsplash.com/photo-1760420919593-c1ae7509faaf?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1ODR8MHwxfHNlYXJjaHwyfHx5b3VuZyUyMHNvY2NlciUyMHBsYXllciUyMHRyYWluaW5nfGVufDB8fHx8MTc3MDEzNzA4NXww&ixlib=rb-4.1.0&q=85"
+                  alt="Focused young player"
+                  className="w-full h-48 object-cover"
+                  data-testid="about-image-2"
+                />
+                <div className="bg-[#0A0A0A] p-6 text-white">
+                  <Brain size={32} className="mb-4" />
+                  <h4 className="font-bold text-xl uppercase mb-2" style={{ fontFamily: 'Barlow Condensed, sans-serif' }}>Mindset</h4>
+                  <p className="text-sm opacity-90">Think like a champion</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+// Services Section
+const ServicesSection = () => {
+  return (
+    <section id="services" className="py-20 md:py-32 px-6 lg:px-12 bg-[#F5F5F5]" data-testid="services-section">
+      <div className="max-w-7xl mx-auto">
+        {/* Header */}
+        <div className="text-center mb-16">
+          <span className="text-sm font-medium tracking-widest uppercase text-[#D92323] mb-4 block" style={{ fontFamily: 'Barlow Condensed, sans-serif' }}>
+            Our Services
+          </span>
+          <h2 className="text-4xl md:text-5xl font-bold tracking-tight uppercase text-[#0A0A0A] mb-6" style={{ fontFamily: 'Barlow Condensed, sans-serif' }}>
+            Choose Your <span className="text-[#D92323]">Path</span> to Success
+          </h2>
+          <div className="red-accent-line mx-auto"></div>
+        </div>
+
+        {/* Service Cards */}
+        <div className="grid md:grid-cols-3 gap-8">
+          {SERVICES.map((service) => {
+            const IconComponent = service.icon;
+            return (
+              <div key={service.id} className="service-card" data-testid={`service-card-${service.id}`}>
+                <div className="mb-6">
+                  <div className="w-14 h-14 bg-[#D92323]/10 flex items-center justify-center mb-4">
+                    <IconComponent size={28} className="text-[#D92323]" />
+                  </div>
+                  <h3 className="text-2xl font-bold uppercase text-[#0A0A0A] mb-3" style={{ fontFamily: 'Barlow Condensed, sans-serif' }}>
+                    {service.title}
+                  </h3>
+                  <p className="text-gray-600 leading-relaxed mb-6">
+                    {service.description}
+                  </p>
+                </div>
+                <a
+                  href={service.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-primary inline-flex items-center gap-2 text-sm w-full justify-center"
+                  data-testid={`service-cta-${service.id}`}
+                >
+                  {service.cta} <ArrowRight size={16} />
+                </a>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+// Diego Section
+const DiegoSection = () => {
+  return (
+    <section id="diego" className="py-20 md:py-32 px-6 lg:px-12 bg-white relative overflow-hidden" data-testid="diego-section">
+      {/* Watermark */}
+      <span className="watermark-number absolute -right-10 top-0">02</span>
+      
+      <div className="max-w-7xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-12 lg:gap-20 items-center">
+          {/* Image */}
+          <div className="relative order-2 md:order-1">
+            <div className="relative">
+              <img
+                src={DIEGO_IMAGE}
+                alt="Diego - The Confident Footballer founder"
+                className="w-full h-[500px] object-cover"
+                data-testid="diego-image"
+              />
+              <div className="absolute -bottom-6 -right-6 bg-[#D92323] p-6 text-white">
+                <Target size={32} className="mb-2" />
+                <p className="font-bold uppercase" style={{ fontFamily: 'Barlow Condensed, sans-serif' }}>Mindset Specialist</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Content */}
+          <div className="relative z-10 order-1 md:order-2">
+            <span className="text-sm font-medium tracking-widest uppercase text-[#D92323] mb-4 block" style={{ fontFamily: 'Barlow Condensed, sans-serif' }}>
+              Meet The Specialist
+            </span>
+            <h2 className="text-4xl md:text-5xl font-bold tracking-tight uppercase text-[#0A0A0A] mb-6" style={{ fontFamily: 'Barlow Condensed, sans-serif' }}>
+              Diego
+            </h2>
+            <div className="red-accent-line mb-6"></div>
+            <p className="text-base md:text-lg leading-relaxed text-gray-600 mb-6">
+              Diego is the founder and lead mindset coach at The Confident Footballer. With years of experience working with young athletes, he understands the unique mental challenges that young footballers face.
+            </p>
+            <p className="text-base md:text-lg leading-relaxed text-gray-600 mb-6">
+              His passion is helping players unlock their potential by developing a winning mindset. Diego combines sports psychology techniques with practical, easy-to-apply strategies that produce real results on the pitch.
+            </p>
+            <p className="text-base md:text-lg leading-relaxed text-gray-600 mb-8">
+              Whether through the online course, personal mentorship sessions, or his comprehensive ebook, Diego's mission is to help every young player develop the confidence, consistency, and courage they need to succeed.
+            </p>
+            <a
+              href="https://forms.gle/f18mTdsL4seLQwcE7"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-secondary inline-flex items-center gap-2"
+              data-testid="diego-cta"
+            >
+              Work With Diego <ArrowRight size={18} />
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+// Testimonials Section
+const TestimonialsSection = () => {
+  return (
+    <section id="testimonials" className="py-20 md:py-32 px-6 lg:px-12 bg-[#0A0A0A]" data-testid="testimonials-section">
+      <div className="max-w-7xl mx-auto">
+        {/* Header */}
+        <div className="text-center mb-16">
+          <span className="text-sm font-medium tracking-widest uppercase text-[#D92323] mb-4 block" style={{ fontFamily: 'Barlow Condensed, sans-serif' }}>
+            Testimonials
+          </span>
+          <h2 className="text-4xl md:text-5xl font-bold tracking-tight uppercase text-white mb-6" style={{ fontFamily: 'Barlow Condensed, sans-serif' }}>
+            What <span className="text-[#D92323]">Parents</span> Say
+          </h2>
+          <div className="red-accent-line mx-auto"></div>
+        </div>
+
+        {/* Testimonial Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {TESTIMONIALS.map((testimonial) => (
+            <div key={testimonial.id} className="testimonial-card bg-white" data-testid={`testimonial-${testimonial.id}`}>
+              <Quote size={32} className="quote-icon mb-4" />
+              <p className="text-gray-700 leading-relaxed mb-6 italic">
+                "{testimonial.quote}"
+              </p>
+              <div className="flex items-center gap-4">
+                <img
+                  src={testimonial.image}
+                  alt={testimonial.player}
+                  className="w-12 h-12 rounded-full object-cover"
+                />
+                <div>
+                  <p className="font-bold text-[#0A0A0A]" style={{ fontFamily: 'Barlow Condensed, sans-serif' }}>
+                    {testimonial.parent}
+                  </p>
+                  <p className="text-sm text-gray-500">{testimonial.player}</p>
+                </div>
+              </div>
+              <div className="flex gap-1 mt-4">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} size={16} className="fill-[#D92323] text-[#D92323]" />
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+// Footer Section
+const Footer = () => {
+  return (
+    <footer className="footer py-12 px-6 lg:px-12" data-testid="footer">
+      <div className="max-w-7xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-12">
+          {/* Brand */}
+          <div>
+            <h3 className="font-bold text-2xl tracking-tight mb-4" style={{ fontFamily: 'Barlow Condensed, sans-serif' }}>
+              <span className="text-white">THE </span>
+              <span className="text-[#D92323]">CONFIDENT</span>
+              <span className="text-white"> FOOTBALLER</span>
+            </h3>
+            <p className="text-gray-400 text-sm leading-relaxed">
+              Helping young players play with confidence, consistency, and courage under pressure.
+            </p>
+          </div>
+
+          {/* Quick Links */}
+          <div>
+            <h4 className="font-bold text-lg uppercase mb-4 text-white" style={{ fontFamily: 'Barlow Condensed, sans-serif' }}>
+              Quick Links
+            </h4>
+            <ul className="space-y-2">
+              <li><a href="#about" className="text-gray-400 hover:text-[#D92323] transition-colors duration-300 text-sm">About</a></li>
+              <li><a href="#services" className="text-gray-400 hover:text-[#D92323] transition-colors duration-300 text-sm">Services</a></li>
+              <li><a href="#testimonials" className="text-gray-400 hover:text-[#D92323] transition-colors duration-300 text-sm">Testimonials</a></li>
+              <li><a href="#diego" className="text-gray-400 hover:text-[#D92323] transition-colors duration-300 text-sm">Meet Diego</a></li>
+            </ul>
+          </div>
+
+          {/* Services */}
+          <div>
+            <h4 className="font-bold text-lg uppercase mb-4 text-white" style={{ fontFamily: 'Barlow Condensed, sans-serif' }}>
+              Services
+            </h4>
+            <ul className="space-y-2">
+              <li>
+                <a href="https://www.youthfootballer.com/offers/FpedL4Pg/checkout" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#D92323] transition-colors duration-300 text-sm" data-testid="footer-online-course">
+                  Online Course
+                </a>
+              </li>
+              <li>
+                <a href="https://forms.gle/f18mTdsL4seLQwcE7" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#D92323] transition-colors duration-300 text-sm" data-testid="footer-mentorship">
+                  Individual Mentorship
+                </a>
+              </li>
+              <li>
+                <a href="https://www.youthfootballer.com/offers/vvS23JNp/checkout" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#D92323] transition-colors duration-300 text-sm" data-testid="footer-ebook">
+                  The Ebook
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        {/* Bottom Bar */}
+        <div className="border-t border-gray-800 mt-12 pt-8 text-center">
+          <p className="text-gray-500 text-sm">
+            © {new Date().getFullYear()} The Confident Footballer. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+// Main App Component
 function App() {
+  const [scrolled, setScrolled] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <div className="App">
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />}>
-            <Route index element={<Home />} />
-          </Route>
-        </Routes>
-      </BrowserRouter>
+      <Navigation 
+        scrolled={scrolled} 
+        mobileMenuOpen={mobileMenuOpen} 
+        setMobileMenuOpen={setMobileMenuOpen} 
+      />
+      <HeroSection />
+      <AboutSection />
+      <ServicesSection />
+      <DiegoSection />
+      <TestimonialsSection />
+      <Footer />
     </div>
   );
 }
