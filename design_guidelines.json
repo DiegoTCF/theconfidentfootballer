@@ -1,0 +1,176 @@
+{
+  "design_system": {
+    "typography": {
+      "font_family": {
+        "heading": "Barlow Condensed, sans-serif",
+        "body": "Inter, sans-serif"
+      },
+      "imports": [
+        "https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap"
+      ],
+      "scale": {
+        "h1": "text-6xl md:text-7xl font-extrabold tracking-tighter uppercase",
+        "h2": "text-4xl md:text-5xl font-bold tracking-tight uppercase",
+        "h3": "text-2xl md:text-3xl font-bold uppercase",
+        "body": "text-base md:text-lg leading-relaxed text-gray-600",
+        "caption": "text-sm font-medium tracking-widest uppercase text-red-600"
+      }
+    },
+    "colors": {
+      "palette": {
+        "primary": {
+          "DEFAULT": "#0A0A0A",
+          "foreground": "#FFFFFF"
+        },
+        "secondary": {
+          "DEFAULT": "#F5F5F5",
+          "foreground": "#0A0A0A"
+        },
+        "accent": {
+          "DEFAULT": "#D92323",
+          "foreground": "#FFFFFF",
+          "description": "Electric Red for CTAs and highlights. Matches brand energy."
+        },
+        "background": "#FFFFFF",
+        "foreground": "#0A0A0A",
+        "muted": "#F3F4F6",
+        "border": "#E5E7EB"
+      },
+      "gradients": {
+        "hero_overlay": "linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.7))",
+        "red_glow": "radial-gradient(circle at center, rgba(217, 35, 35, 0.15) 0%, transparent 70%)"
+      }
+    },
+    "spacing": {
+      "container_padding": "px-6 md:px-12 lg:px-24",
+      "section_gap": "py-20 md:py-32",
+      "element_gap": "gap-6 md:gap-12"
+    },
+    "visual_enhancers": {
+      "border_radius": "rounded-sm",
+      "shadows": {
+        "card": "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
+        "hover": "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)"
+      },
+      "textures": "Use subtle noise overlay on solid red sections to add grit."
+    }
+  },
+  "components": {
+    "buttons": {
+      "primary": "bg-accent hover:bg-red-700 text-white font-bold py-4 px-8 rounded-sm uppercase tracking-wider transition-all duration-300 transform hover:-translate-y-1 shadow-lg hover:shadow-red-500/30",
+      "secondary": "bg-white border-2 border-black text-black hover:bg-black hover:text-white font-bold py-4 px-8 rounded-sm uppercase tracking-wider transition-all duration-300"
+    },
+    "cards": {
+      "service": "bg-white border border-gray-200 p-8 hover:border-red-500 transition-colors duration-300 group relative overflow-hidden",
+      "testimonial": "bg-gray-50 p-8 rounded-sm border-l-4 border-red-600"
+    }
+  },
+  "layout_strategies": {
+    "hero": {
+      "type": "Full Width Banner",
+      "structure": "Image Background with Overlay Content",
+      "alignment": "Center aligned text for maximum impact",
+      "image_url": "https://customer-assets.emergentagent.com/job_31770e76-de7f-4d90-b907-c512e37565a9/artifacts/yqwxs7zq_The%20confident%20footballer%20banner%20design.png"
+    },
+    "about": {
+      "type": "Asymmetric Grid",
+      "structure": "Text on Left, Overlapping Images on Right. Use 'Tetris' grid logic.",
+      "details": "Use a large '01' watermark number in background."
+    },
+    "services": {
+      "type": "3-Column Grid",
+      "structure": "Equal height cards. Hover effects reveal 'Learn More' arrow."
+    },
+    "testimonials": {
+      "type": "Masonry or 3x2 Grid",
+      "structure": "Clean cards with player photo avatar and parent name."
+    }
+  },
+  "image_assets": {
+    "hero_banner": "https://customer-assets.emergentagent.com/job_31770e76-de7f-4d90-b907-c512e37565a9/artifacts/yqwxs7zq_The%20confident%20footballer%20banner%20design.png",
+    "about_section": [
+      {
+        "url": "https://images.unsplash.com/photo-1761225092045-698d1c4a9f43?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1ODR8MHwxfHNlYXJjaHwxfHx5b3VuZyUyMHNvY2NlciUyMHBsYXllciUyMHRyYWluaW5nfGVufDB8fHx8MTc3MDEzNzA4NXww&ixlib=rb-4.1.0&q=85",
+        "alt": "Young footballer practicing tricks",
+        "position": "Main visual for About section"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1760420919593-c1ae7509faaf?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1ODR8MHwxfHNlYXJjaHwyfHx5b3VuZyUyMHNvY2NlciUyMHBsYXllciUyMHRyYWluaW5nfGVufDB8fHx8MTc3MDEzNzA4NXww&ixlib=rb-4.1.0&q=85",
+        "alt": "Focused young player",
+        "position": "Secondary visual"
+      }
+    ],
+    "diego_section": {
+      "url": "https://images.unsplash.com/photo-1561701202-64e5f6aa443f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzd8MHwxfHNlYXJjaHwxfHxzb2NjZXIlMjBjb2FjaCUyMHRhbGtpbmclMjB0byUyMHBsYXllcnxlbnwwfHx8fDE3NzAxMzcwOTF8MA&ixlib=rb-4.1.0&q=85",
+      "alt": "Coach Diego talking to player",
+      "note": "Use this as placeholder for Diego if real photo not provided"
+    },
+    "testimonials": [
+      "https://images.unsplash.com/photo-1674941136150-aa2f2df3e128?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1ODR8MHwxfHNlYXJjaHw0fHx5b3VuZyUyMHNvY2NlciUyMHBsYXllciUyMHRyYWluaW5nfGVufDB8fHx8MTc3MDEzNzA4NXww&ixlib=rb-4.1.0&q=85",
+      "https://images.unsplash.com/photo-1769383924825-44706af97281?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1ODR8MHwxfHNlYXJjaHwzfHx5b3VuZyUyMHNvY2NlciUyMHBsYXllciUyMHRyYWluaW5nfGVufDB8fHx8MTc3MDEzNzA4NXww&ixlib=rb-4.1.0&q=85",
+      "https://images.unsplash.com/photo-1554072127-1b7d6bac4432?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzd8MHwxfHNlYXJjaHwyfHxzb2NjZXIlMjBjb2FjaCUyMHRhbGtpbmclMjB0byUyMHBsYXllcnxlbnwwfHx8fDE3NzAxMzcwOTF8MA&ixlib=rb-4.1.0&q=85",
+      "https://images.unsplash.com/photo-1638029851126-8f56dee1dbe6?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzd8MHwxfHNlYXJjaHwzfHxzb2NjZXIlMjBjb2FjaCUyMHRhbGtpbmclMjB0byUyMHBsYXllcnxlbnwwfHx8fDE3NzAxMzcwOTF8MA&ixlib=rb-4.1.0&q=85",
+      "https://images.unsplash.com/photo-1550378492-4903c3e172a4?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzd8MHwxfHNlYXJjaHw0fHxzb2NjZXIlMjBjb2FjaCUyMHRhbGtpbmclMjB0byUyMHBsYXllcnxlbnwwfHx8fDE3NzAxMzcwOTF8MA&ixlib=rb-4.1.0&q=85",
+      "https://images.unsplash.com/photo-1761225092045-698d1c4a9f43?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1ODR8MHwxfHNlYXJjaHwxfHx5b3VuZyUyMHNvY2NlciUyMHBsYXllciUyMHRyYWluaW5nfGVufDB8fHx8MTc3MDEzNzA4NXww&ixlib=rb-4.1.0&q=85"
+    ]
+  },
+  "content_strategy": {
+    "hero": {
+      "title": "UNLOCK YOUR FULL POTENTIAL",
+      "subtitle": "The ultimate mindset programme for young footballers who want to dominate the game.",
+      "cta": "START YOUR JOURNEY"
+    },
+    "services": [
+      {
+        "title": "Online Course",
+        "description": "Comprehensive mindset training modules accessible anywhere, anytime.",
+        "link": "https://www.youthfootballer.com/offers/FpedL4Pg/checkout",
+        "cta": "ENROLL NOW"
+      },
+      {
+        "title": "Individual Mentorship",
+        "description": "1-on-1 coaching sessions tailored to your specific goals and challenges.",
+        "link": "https://forms.gle/f18mTdsL4seLQwcE7",
+        "cta": "APPLY FOR MENTORSHIP"
+      },
+      {
+        "title": "The Ebook",
+        "description": "Essential reading for players and parents. The blueprint to confidence.",
+        "link": "https://www.youthfootballer.com/offers/vvS23JNp/checkout",
+        "cta": "GET THE GUIDE"
+      }
+    ]
+  },
+  "instructions_to_main_agent": [
+    "Use the provided Hero Banner URL as the main visual anchor.",
+    "Implement the 'Barlow Condensed' font for all headings to give that athletic, jersey-like feel.",
+    "Ensure the 'Red' accent is used sparingly but effectively for CTAs and key highlights.",
+    "The background MUST be white (#FFFFFF) as requested. Do not use dark mode.",
+    "For the Testimonials, use the provided images as avatars for the players, and create realistic placeholder text for 'Parent of [Player Name]'.",
+    "Ensure all buttons have the 'data-testid' attribute.",
+    "Use 'lucide-react' for icons (e.g., Trophy, Book, Users, Star).",
+    "Create a 'sticky' navigation bar that stays visible on scroll.",
+    "The 'Diego' section should feel personal. Use a layout that puts the text and image side-by-side.",
+    "Footer should be simple: Black background, white text, links to social media and contact."
+  ],
+  "UNIVERSAL_GUIDELINES_FOR_MAIN_AGENT": [
+    "Dark colors look good when used independently without gradients. DO NOT use dark colors as gradients",
+    "Don't make generic centered layouts, simplistic gradients, and uniform styling.",
+    "Create depth through layered design elements with z-index hierarchy",
+    "Use glass-morphism effects with backdrop filters (12-24px blur)",
+    "You MUST NOT apply universal transition. Eg: transition: all. This results in breaking transforms. Always add transitions for specific interactive elements like button, input excluding transforms",
+    "You MUST NOT center align the app container, ie do not add .App { text-align: center; } in the css file. This disrupts the human natural reading flow of text",
+    "Always use modern button styles like pill-shaped, or sharp button with interaction animations & color relevant to the app style",
+    "NEVER: use AI assistant Emoji characters like 🤖🧠💭💡🔮🎯 etc for icons.",
+    "Every interaction needs micro-animations - hover states, transitions, parallax effects, and entrance animations. Static = dead.",
+    "Use 2-3x more spacing than feels comfortable. Cramped designs look cheap.",
+    "Subtle grain textures, noise overlays, custom cursors, selection states, and loading animations: separates good from extraordinary.",
+    "Main agent relies on these image URLs. Missing categories (especially sponsor logos) = main agent will use placeholder text which is FORBIDDEN",
+    "Prioritize using pre-existing components from src/components/ui when applicable",
+    "Create new components that match the style and conventions of existing components when needed",
+    "Examine existing components to understand the project's component patterns before creating new ones",
+    "Components MUST use named exports (export const ComponentName = ...)",
+    "Pages MUST use default exports (export default function PageName() {...})",
+    "Use sonner for toasts"
+  ]
+}
