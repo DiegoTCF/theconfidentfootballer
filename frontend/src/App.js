@@ -368,15 +368,12 @@ const DiegoSection = () => {
 // Testimonials Section
 const TestimonialsSection = () => {
   return (
-    <section id="testimonials" className="py-20 md:py-32 px-6 lg:px-12 bg-[#0A0A0A]" data-testid="testimonials-section">
+    <section id="testimonials" className="py-20 md:py-28 px-6 lg:px-12 bg-white" data-testid="testimonials-section">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
-          <span className="text-sm font-medium tracking-widest uppercase text-[#D92323] mb-4 block" style={{ fontFamily: 'Barlow Condensed, sans-serif' }}>
-            Testimonials
-          </span>
-          <h2 className="text-4xl md:text-5xl font-bold tracking-tight uppercase text-white mb-6" style={{ fontFamily: 'Barlow Condensed, sans-serif' }}>
-            What <span className="text-[#D92323]">Parents</span> Say
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-[#0A0A0A] mb-6" style={{ fontFamily: 'Barlow Condensed, sans-serif' }}>
+            Here is what the parents of our <span className="text-[#D92323]">Confident Footballers</span> are saying:
           </h2>
           <div className="red-accent-line mx-auto"></div>
         </div>
@@ -384,28 +381,30 @@ const TestimonialsSection = () => {
         {/* Testimonial Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {TESTIMONIALS.map((testimonial) => (
-            <div key={testimonial.id} className="testimonial-card bg-white" data-testid={`testimonial-${testimonial.id}`}>
-              <Quote size={32} className="quote-icon mb-4" />
-              <p className="text-gray-700 leading-relaxed mb-6 italic">
-                "{testimonial.quote}"
-              </p>
-              <div className="flex items-center gap-4">
-                <img
-                  src={testimonial.image}
-                  alt={testimonial.player}
-                  className="w-12 h-12 rounded-full object-cover"
-                />
-                <div>
-                  <p className="font-bold text-[#0A0A0A]" style={{ fontFamily: 'Barlow Condensed, sans-serif' }}>
-                    {testimonial.parent}
-                  </p>
-                  <p className="text-sm text-gray-500">{testimonial.player}</p>
-                </div>
-              </div>
-              <div className="flex gap-1 mt-4">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} size={16} className="fill-[#D92323] text-[#D92323]" />
-                ))}
+            <div 
+              key={testimonial.id} 
+              className="testimonial-overlay-card group relative h-80 overflow-hidden cursor-pointer"
+              data-testid={`testimonial-${testimonial.id}`}
+            >
+              {/* Background Image */}
+              <img
+                src={testimonial.image}
+                alt={testimonial.parent}
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+              
+              {/* Dark Overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-black/30 transition-opacity duration-300"></div>
+              
+              {/* Content */}
+              <div className="absolute inset-0 p-6 flex flex-col justify-end transition-transform duration-300 group-hover:-translate-y-2">
+                <Quote size={28} className="text-[#D92323] mb-3 opacity-80" />
+                <p className="text-white text-sm md:text-base leading-relaxed mb-4 italic">
+                  "{testimonial.quote}"
+                </p>
+                <p className="text-[#D92323] font-bold uppercase tracking-wider text-sm" style={{ fontFamily: 'Barlow Condensed, sans-serif' }}>
+                  {testimonial.parent}
+                </p>
               </div>
             </div>
           ))}
