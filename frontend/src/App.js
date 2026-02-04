@@ -395,22 +395,24 @@ const DiegoSection = () => {
 // Testimonials Section
 const TestimonialsSection = () => {
   return (
-    <section id="testimonials" className="py-20 md:py-28 px-6 lg:px-12 bg-white" data-testid="testimonials-section">
-      <div className="max-w-7xl mx-auto">
+    <section id="testimonials" className="py-16 md:py-20 bg-white" data-testid="testimonials-section">
+      <div className="max-w-7xl mx-auto px-6 lg:px-12 mb-10">
         {/* Header */}
-        <div className="text-center mb-16">
+        <div className="text-center">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-[#0A0A0A] mb-6" style={{ fontFamily: 'Barlow Condensed, sans-serif' }}>
             Here is what the parents of our <span className="text-[#D92323]">Confident Footballers</span> are saying:
           </h2>
           <div className="red-accent-line mx-auto"></div>
         </div>
+      </div>
 
-        {/* Testimonial Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {/* Horizontal Scrolling Gallery */}
+      <div className="overflow-x-auto scrollbar-hide pb-4">
+        <div className="flex gap-6 px-6 lg:px-12" style={{ width: 'max-content' }}>
           {TESTIMONIALS.map((testimonial) => (
             <div 
               key={testimonial.id} 
-              className="testimonial-overlay-card group relative h-80 overflow-hidden cursor-pointer"
+              className="testimonial-overlay-card group relative h-72 w-80 flex-shrink-0 overflow-hidden cursor-pointer"
               data-testid={`testimonial-${testimonial.id}`}
             >
               {/* Background Image */}
@@ -424,9 +426,9 @@ const TestimonialsSection = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-black/30 transition-opacity duration-300"></div>
               
               {/* Content */}
-              <div className="absolute inset-0 p-6 flex flex-col justify-end transition-transform duration-300 group-hover:-translate-y-2">
-                <Quote size={28} className="text-[#D92323] mb-3 opacity-80" />
-                <p className="text-white text-sm md:text-base leading-relaxed mb-4 italic">
+              <div className="absolute inset-0 p-5 flex flex-col justify-end transition-transform duration-300 group-hover:-translate-y-2">
+                <Quote size={24} className="text-[#D92323] mb-2 opacity-80" />
+                <p className="text-white text-sm leading-relaxed mb-3 italic line-clamp-4">
                   "{testimonial.quote}"
                 </p>
                 <p className="text-white text-sm">
