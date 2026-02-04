@@ -426,7 +426,7 @@ const TestimonialsSection = () => {
               <img
                 src={testimonial.image}
                 alt={testimonial.player}
-                className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                className="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-110"
               />
               
               {/* Dark Overlay */}
