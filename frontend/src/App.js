@@ -503,10 +503,10 @@ function App() {
         setMobileMenuOpen={setMobileMenuOpen} 
       />
       <HeroSection />
+      <TestimonialsSection />
       <AboutSection />
       <ServicesSection />
       <DiegoSection />
-      <TestimonialsSection />
       <Footer />
     </div>
   );
