@@ -38,14 +38,14 @@ const TESTIMONIALS = [
     player: "Salih",
     quote: "His mindset is very strong and solid, which made him realize his character.",
     parent: "Bayram Karapinar",
-    image: "https://images.unsplash.com/photo-1596464716127-f2a82984de30?w=600&fit=crop"
+    image: "https://customer-assets.emergentagent.com/job_soccer-confidence-2/artifacts/gxzvtnh4_WhatsApp%20Image%202025-08-12%20at%2016.31.39.jpeg"
   },
   {
     id: 2,
     player: "Isaac",
     quote: "Isaac's confidence has improved considerably. He now believes in himself and can handle the fear of failure better.",
     parent: "Badu",
-    image: "https://images.unsplash.com/photo-1517466787929-bc90951d0974?w=600&fit=crop"
+    image: "https://customer-assets.emergentagent.com/job_soccer-confidence-2/artifacts/otbgseyv_image-5.png"
   },
   {
     id: 3,
@@ -73,14 +73,14 @@ const TESTIMONIALS = [
     player: "Alasdair",
     quote: "Alasdair's confidence has grown and how he reflects on his focus during games. We've seen a significant change in him.",
     parent: "Craig Burns",
-    image: "https://images.unsplash.com/photo-1560272564-c83b66b1ad12?w=600&fit=crop"
+    image: "https://customer-assets.emergentagent.com/job_soccer-confidence-2/artifacts/0f3gcxnt_The%20Confident%20Footballer-5.png"
   },
   {
     id: 7,
     player: "Pedro Victor",
     quote: "Pedro's communication in football has improved a lot.",
     parent: "Glauco Felício",
-    image: "https://images.unsplash.com/photo-1551958219-acbc608c6377?w=600&fit=crop"
+    image: "https://customer-assets.emergentagent.com/job_soccer-confidence-2/artifacts/fg57y9wh_image.png"
   },
   {
     id: 8,
