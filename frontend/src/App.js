@@ -416,7 +416,7 @@ const TestimonialsSection = () => {
               {/* Background Image */}
               <img
                 src={testimonial.image}
-                alt={testimonial.parent}
+                alt={testimonial.player}
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
               />
               
@@ -429,8 +429,11 @@ const TestimonialsSection = () => {
                 <p className="text-white text-sm md:text-base leading-relaxed mb-4 italic">
                   "{testimonial.quote}"
                 </p>
-                <p className="text-[#D92323] font-bold uppercase tracking-wider text-sm" style={{ fontFamily: 'Barlow Condensed, sans-serif' }}>
-                  {testimonial.parent}
+                <p className="text-white text-sm">
+                  <span className="text-[#D92323] font-bold uppercase tracking-wider" style={{ fontFamily: 'Barlow Condensed, sans-serif' }}>
+                    {testimonial.player}'s parent
+                  </span>
+                  <span className="text-gray-300"> — {testimonial.parent}</span>
                 </p>
               </div>
             </div>
