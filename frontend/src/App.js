@@ -35,39 +35,66 @@ const SERVICES = [
 const TESTIMONIALS = [
   {
     id: 1,
-    quote: "My son's confidence on the pitch has completely transformed. He used to hesitate during games, but now he plays with real purpose and belief.",
-    parent: "Isaac's father",
+    player: "Salih",
+    quote: "His mindset is very strong and solid, which made him realize his character.",
+    parent: "Bayram Karapinar",
     image: "https://images.unsplash.com/photo-1596464716127-f2a82984de30?w=600&fit=crop"
   },
   {
     id: 2,
-    quote: "The mentorship programme was a game-changer. Diego understood exactly what my daughter needed to overcome her performance anxiety.",
-    parent: "Emma's mother",
+    player: "Isaac",
+    quote: "Isaac's confidence has improved considerably. He now believes in himself and can handle the fear of failure better.",
+    parent: "Badu",
     image: "https://images.unsplash.com/photo-1517466787929-bc90951d0974?w=600&fit=crop"
   },
   {
     id: 3,
-    quote: "We've tried other programmes before, but nothing compares to The Confident Footballer. The results speak for themselves.",
-    parent: "Lucas's father",
+    player: "Pedro",
+    quote: "Diego has helped Pedro's confidence and resilience to overcome setbacks and challenges since he was 11 years old. Thank you for everything!",
+    parent: "Michael Araujo Alves",
     image: "https://images.unsplash.com/photo-1579952363873-27f3bade9f55?w=600&fit=crop"
   },
   {
     id: 4,
-    quote: "The online course gave our son practical tools he uses every match. His coaches have noticed a huge difference in his composure.",
-    parent: "Marcus's mother",
+    player: "Jude",
+    quote: "My son grew in confidence after the sessions with Diego.",
+    parent: "Jamie Holloway",
     image: "https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=600&fit=crop"
   },
   {
     id: 5,
-    quote: "Worth every penny. My daughter went from sitting on the bench to starting every game. The mental shift was incredible.",
-    parent: "Sophie's father",
+    player: "Ralph",
+    quote: "Ralph has tools he can use and refer to. It's helped us as parents know how to help him too.",
+    parent: "Becky",
     image: "https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?w=600&fit=crop"
   },
   {
     id: 6,
-    quote: "Diego's ebook was the perfect starting point. Simple, actionable advice that we could implement immediately. Highly recommend!",
-    parent: "Oliver's mother",
+    player: "Alasdair",
+    quote: "Alasdair's confidence has grown and how he reflects on his focus during games. We've seen a significant change in him.",
+    parent: "Craig Burns",
     image: "https://images.unsplash.com/photo-1560272564-c83b66b1ad12?w=600&fit=crop"
+  },
+  {
+    id: 7,
+    player: "Pedro Victor",
+    quote: "Pedro's communication in football has improved a lot.",
+    parent: "Glauco Felício",
+    image: "https://images.unsplash.com/photo-1551958219-acbc608c6377?w=600&fit=crop"
+  },
+  {
+    id: 8,
+    player: "Freddie",
+    quote: "Working with Diego has been fantastic for Freddie. The pre-match process and post-match feedback are invaluable. The Confident Footballer has become a key part of Freddie's program—one I would highly recommend.",
+    parent: "Danny Clarke",
+    image: "https://images.unsplash.com/photo-1606925797300-0b35e9d1794e?w=600&fit=crop"
+  },
+  {
+    id: 9,
+    player: "Rehaan",
+    quote: "Rehaan is in a much more positive mindset compared to where he started, and I can see him asserting himself effectively in trainings and matches.",
+    parent: "Rehmat Adenwala",
+    image: "https://images.unsplash.com/photo-1624880357913-a8539238245b?w=600&fit=crop"
   }
 ];
 
