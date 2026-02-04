@@ -34,6 +34,13 @@ const SERVICES = [
 
 const TESTIMONIALS = [
   {
+    id: 0,
+    player: "Oliver",
+    quote: "The programme has made a real difference to Oliver's game. His focus and mental resilience have improved tremendously.",
+    parent: "Garry Jordan",
+    image: "https://customer-assets.emergentagent.com/job_soccer-confidence-2/artifacts/x324t1sf_lost%201-0%20to%20ipswich%20%E2%86%92%20ref%20didnt%20give%20a%20foul%20and%20they%20scored%20early.%20%20we%20beat%20wh%202-1%20%E2%86%92%20I%20scored%20%20we%20beat%20palace%201-0%20%E2%86%92%20%20Arsenal%20loss%201-3%20%E2%86%92%20scored%201%20Brentford%201-2%20%E2%86%92.png"
+  },
+  {
     id: 1,
     player: "Salih",
     quote: "His mindset is very strong and solid, which made him realize his character.",
