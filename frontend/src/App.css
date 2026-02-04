@@ -148,6 +148,24 @@
     box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2);
 }
 
+/* Hide scrollbar but keep functionality */
+.scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+
+/* Line clamp for testimonial text */
+.line-clamp-4 {
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
 /* Diego Section */
 .diego-section {
     background-color: #F5F5F5;
