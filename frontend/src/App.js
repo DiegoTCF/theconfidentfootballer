@@ -101,7 +101,7 @@ const TESTIMONIALS = [
     player: "Rehaan",
     quote: "Rehaan is in a much more positive mindset compared to where he started, and I can see him asserting himself effectively in trainings and matches.",
     parent: "Rehmat Adenwala",
-    image: "https://images.unsplash.com/photo-1624880357913-a8539238245b?w=600&fit=crop"
+    image: "https://customer-assets.emergentagent.com/job_soccer-confidence-2/artifacts/tvzvlkdp_WhatsApp%20Image%202025-09-26%20at%2011.22.17.jpg"
   }
 ];
 
