@@ -36,44 +36,38 @@ const TESTIMONIALS = [
   {
     id: 1,
     quote: "My son's confidence on the pitch has completely transformed. He used to hesitate during games, but now he plays with real purpose and belief.",
-    parent: "Sarah M.",
-    player: "Parent of James, U14",
-    image: "https://images.unsplash.com/photo-1674941136150-aa2f2df3e128?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1ODR8MHwxfHNlYXJjaHw0fHx5b3VuZyUyMHNvY2NlciUyMHBsYXllciUyMHRyYWluaW5nfGVufDB8fHx8MTc3MDEzNzA4NXww&ixlib=rb-4.1.0&q=85"
+    parent: "Isaac's father",
+    image: "https://images.unsplash.com/photo-1596464716127-f2a82984de30?w=600&fit=crop"
   },
   {
     id: 2,
     quote: "The mentorship programme was a game-changer. Diego understood exactly what my daughter needed to overcome her performance anxiety.",
-    parent: "Michael T.",
-    player: "Parent of Emma, U16",
-    image: "https://images.unsplash.com/photo-1769383924825-44706af97281?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1ODR8MHwxfHNlYXJjaHwzfHx5b3VuZyUyMHNvY2NlciUyMHBsYXllciUyMHRyYWluaW5nfGVufDB8fHx8MTc3MDEzNzA4NXww&ixlib=rb-4.1.0&q=85"
+    parent: "Emma's mother",
+    image: "https://images.unsplash.com/photo-1517466787929-bc90951d0974?w=600&fit=crop"
   },
   {
     id: 3,
     quote: "We've tried other programmes before, but nothing compares to The Confident Footballer. The results speak for themselves.",
-    parent: "Jennifer K.",
-    player: "Parent of Lucas, U13",
-    image: "https://images.unsplash.com/photo-1554072127-1b7d6bac4432?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzd8MHwxfHNlYXJjaHwyfHxzb2NjZXIlMjBjb2FjaCUyMHRhbGtpbmclMjB0byUyMHBsYXllcnxlbnwwfHx8fDE3NzAxMzcwOTF8MA&ixlib=rb-4.1.0&q=85"
+    parent: "Lucas's father",
+    image: "https://images.unsplash.com/photo-1579952363873-27f3bade9f55?w=600&fit=crop"
   },
   {
     id: 4,
     quote: "The online course gave our son practical tools he uses every match. His coaches have noticed a huge difference in his composure.",
-    parent: "David R.",
-    player: "Parent of Marcus, U15",
-    image: "https://images.unsplash.com/photo-1638029851126-8f56dee1dbe6?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzd8MHwxfHNlYXJjaHwzfHxzb2NjZXIlMjBjb2FjaCUyMHRhbGtpbmclMjB0byUyMHBsYXllcnxlbnwwfHx8fDE3NzAxMzcwOTF8MA&ixlib=rb-4.1.0&q=85"
+    parent: "Marcus's mother",
+    image: "https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=600&fit=crop"
   },
   {
     id: 5,
     quote: "Worth every penny. My daughter went from sitting on the bench to starting every game. The mental shift was incredible.",
-    parent: "Amanda L.",
-    player: "Parent of Sophie, U14",
-    image: "https://images.unsplash.com/photo-1550378492-4903c3e172a4?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzd8MHwxfHNlYXJjaHw0fHxzb2NjZXIlMjBjb2FjaCUyMHRhbGtpbmclMjB0byUyMHBsYXllcnxlbnwwfHx8fDE3NzAxMzcwOTF8MA&ixlib=rb-4.1.0&q=85"
+    parent: "Sophie's father",
+    image: "https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?w=600&fit=crop"
   },
   {
     id: 6,
     quote: "Diego's ebook was the perfect starting point. Simple, actionable advice that we could implement immediately. Highly recommend!",
-    parent: "Robert P.",
-    player: "Parent of Oliver, U12",
-    image: "https://images.unsplash.com/photo-1761225092045-698d1c4a9f43?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1ODR8MHwxfHNlYXJjaHwxfHx5b3VuZyUyMHNvY2NlciUyMHBsYXllciUyMHRyYWluaW5nfGVufDB8fHx8MTc3MDEzNzA4NXww&ixlib=rb-4.1.0&q=85"
+    parent: "Oliver's mother",
+    image: "https://images.unsplash.com/photo-1560272564-c83b66b1ad12?w=600&fit=crop"
   }
 ];
 
