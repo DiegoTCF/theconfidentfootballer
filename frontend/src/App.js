@@ -131,7 +131,7 @@ const TESTIMONIALS = [
     player: "Leon",
     quote: "You should see him during the game. He was like a Modrić. He was doing everything right. He was real, Leon. Strong, winning tackles, his passing was great, and he wasn't scared of dribble few players.",
     parent: "Bartek Bacik",
-    image: "https://images.unsplash.com/photo-1599474924187-334a4ae5bd3c?w=600&fit=crop"
+    image: "https://customer-assets.emergentagent.com/job_soccer-confidence-2/artifacts/ylz65pcm_WhatsApp%20Image%202025-10-27%20at%2017.24.10%20%281%29.jpeg"
   }
 ];
 
