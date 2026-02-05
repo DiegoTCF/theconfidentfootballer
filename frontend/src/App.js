@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import "@/App.css";
-import { Menu, X, BookOpen, Users, FileText, Star, Quote, ArrowRight, Trophy, Brain, Target } from "lucide-react";
+import { Menu, X, BookOpen, Users, FileText, Star, Quote, ArrowRight, Trophy, Brain, Target, ChevronDown } from "lucide-react";
 
 // Constants
 const HERO_BANNER = "https://customer-assets.emergentagent.com/job_31770e76-de7f-4d90-b907-c512e37565a9/artifacts/yqwxs7zq_The%20confident%20footballer%20banner%20design.png";
