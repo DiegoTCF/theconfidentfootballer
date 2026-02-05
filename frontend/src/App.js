@@ -45,7 +45,8 @@ const TESTIMONIALS = [
     player: "Koby",
     quote: "Koby's confidence and ability to manage his emotions has improved significantly since working with Diego. I've seen first hand Diego's ability to get young athletes to focus and develop techniques of being able to overcome setbacks and reset. The past year Koby has developed significantly. He's matured and now expresses his feelings openly. It's been great to work with Diego.",
     parent: "Paul Hanley",
-    image: "https://customer-assets.emergentagent.com/job_soccer-confidence-2/artifacts/v4pmbeyq_WhatsApp%20Image%202025-09-30%20at%2012.27.29.jpg"
+    image: "https://customer-assets.emergentagent.com/job_soccer-confidence-2/artifacts/v4pmbeyq_WhatsApp%20Image%202025-09-30%20at%2012.27.29.jpg",
+    imagePosition: "center"
   },
   {
     id: 2,
