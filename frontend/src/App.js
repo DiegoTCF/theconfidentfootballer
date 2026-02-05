@@ -234,6 +234,15 @@ const Navigation = ({ scrolled, mobileMenuOpen, setMobileMenuOpen }) => {
               </span>
             </a>
 
+            {/* Mobile Get Started Button */}
+            <a
+              href="#services"
+              className="md:hidden btn-primary text-xs px-4 py-2"
+              data-testid="mobile-get-started-top"
+            >
+              Get Started
+            </a>
+
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center gap-8">
               {navLinks.map((link) => (
