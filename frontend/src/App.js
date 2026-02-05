@@ -334,65 +334,101 @@ const HeroSection = () => {
 // About Section
 const AboutSection = () => {
   return (
-    <section id="about" className="py-20 md:py-32 px-6 lg:px-12 bg-white relative overflow-hidden" data-testid="about-section">
-      {/* Watermark */}
-      <span className="watermark-number absolute -left-10 top-0">01</span>
-      
-      <div className="max-w-7xl mx-auto">
-        <div className="grid md:grid-cols-2 gap-12 lg:gap-20 items-center">
-          {/* Content */}
-          <div className="relative z-10">
-            <span className="text-sm font-medium tracking-widest uppercase text-[#D92323] mb-4 block" style={{ fontFamily: 'Barlow Condensed, sans-serif' }}>
-              About The Programme
-            </span>
-            <h2 className="text-4xl md:text-5xl font-bold tracking-tight uppercase text-[#0A0A0A] mb-6" style={{ fontFamily: 'Barlow Condensed, sans-serif' }}>
-              Build Unshakeable <span className="text-[#D92323]">Confidence</span> on the Pitch
-            </h2>
-            <div className="red-accent-line mb-6"></div>
-            <p className="text-base md:text-lg leading-relaxed text-gray-600 mb-6">
-              The Confident Footballer is a comprehensive mindset programme designed specifically for young footballers who want to unlock their full potential. We help players develop the mental strength needed to perform under pressure, bounce back from setbacks, and play with courage and consistency.
-            </p>
-            <p className="text-base md:text-lg leading-relaxed text-gray-600 mb-8">
-              Our proven methodology combines sports psychology principles with practical techniques that young players can apply immediately. Whether your child struggles with pre-match nerves, fear of failure, or inconsistent performances, we have the tools to help them thrive.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <a href="#services" className="btn-primary inline-flex items-center justify-center gap-2" data-testid="about-cta">
-                Explore Our Services <ArrowRight size={18} />
-              </a>
-            </div>
+    <section id="about" className="py-20 md:py-28 px-6 lg:px-12 bg-white relative overflow-hidden" data-testid="about-section">
+      <div className="max-w-4xl mx-auto">
+        {/* Intro */}
+        <div className="text-center mb-12">
+          <p className="text-lg md:text-xl leading-relaxed text-gray-700">
+            <span className="font-bold text-[#0A0A0A]">The Confident Footballer</span> was created because we understand first-hand what it's like to watch your child hold back on the pitch and not express themselves to their full potential.
+          </p>
+        </div>
+
+        {/* Two Column Layout */}
+        <div className="grid md:grid-cols-2 gap-8 md:gap-12">
+          {/* Left Column - Problems */}
+          <div className="bg-[#0A0A0A] p-8 rounded">
+            <h3 className="text-2xl md:text-3xl font-bold text-white mb-6 uppercase" style={{ fontFamily: 'Barlow Condensed, sans-serif' }}>
+              The frustration of seeing them:
+            </h3>
+            <ul className="space-y-4">
+              <li className="flex items-start gap-3 text-gray-300">
+                <span className="text-[#D92323] mt-1">•</span>
+                <span>Overthink every decision</span>
+              </li>
+              <li className="flex items-start gap-3 text-gray-300">
+                <span className="text-[#D92323] mt-1">•</span>
+                <span>Play it safe instead of showing their ability</span>
+              </li>
+              <li className="flex items-start gap-3 text-gray-300">
+                <span className="text-[#D92323] mt-1">•</span>
+                <span>Let one mistake ruin their whole game</span>
+              </li>
+              <li className="flex items-start gap-3 text-gray-300">
+                <span className="text-[#D92323] mt-1">•</span>
+                <span>Struggle with match-day nerves</span>
+              </li>
+              <li className="flex items-start gap-3 text-gray-300">
+                <span className="text-[#D92323] mt-1">•</span>
+                <span>Be brilliant one week, invisible the next</span>
+              </li>
+            </ul>
           </div>
 
-          {/* Image Grid */}
-          <div className="relative">
-            <div className="grid grid-cols-2 gap-4">
-              <div className="space-y-4">
-                <div className="bg-[#D92323] p-6 text-white">
-                  <Trophy size={32} className="mb-4" />
-                  <h4 className="font-bold text-xl uppercase mb-2" style={{ fontFamily: 'Barlow Condensed, sans-serif' }}>Confidence</h4>
-                  <p className="text-sm opacity-90">Play with self-belief</p>
-                </div>
-                <img
-                  src="https://images.unsplash.com/photo-1761225092045-698d1c4a9f43?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1ODR8MHwxfHNlYXJjaHwxfHx5b3VuZyUyMHNvY2NlciUyMHBsYXllciUyMHRyYWluaW5nfGVufDB8fHx8MTc3MDEzNzA4NXww&ixlib=rb-4.1.0&q=85"
-                  alt="Young footballer training"
-                  className="w-full h-48 object-cover"
-                  data-testid="about-image-1"
-                />
-              </div>
-              <div className="space-y-4 mt-8">
-                <img
-                  src="https://images.unsplash.com/photo-1760420919593-c1ae7509faaf?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1ODR8MHwxfHNlYXJjaHwyfHx5b3VuZyUyMHNvY2NlciUyMHBsYXllciUyMHRyYWluaW5nfGVufDB8fHx8MTc3MDEzNzA4NXww&ixlib=rb-4.1.0&q=85"
-                  alt="Focused young player"
-                  className="w-full h-48 object-cover"
-                  data-testid="about-image-2"
-                />
-                <div className="bg-[#0A0A0A] p-6 text-white">
-                  <Brain size={32} className="mb-4" />
-                  <h4 className="font-bold text-xl uppercase mb-2" style={{ fontFamily: 'Barlow Condensed, sans-serif' }}>Mindset</h4>
-                  <p className="text-sm opacity-90">Think like a champion</p>
-                </div>
-              </div>
-            </div>
+          {/* Right Column - Solutions */}
+          <div className="bg-[#D92323] p-8 rounded">
+            <h3 className="text-2xl md:text-3xl font-bold text-white mb-6 uppercase" style={{ fontFamily: 'Barlow Condensed, sans-serif' }}>
+              At The Confident Footballer, we help your child:
+            </h3>
+            <ul className="space-y-4">
+              <li className="flex items-start gap-3 text-white">
+                <span className="text-[#0A0A0A] mt-1">✓</span>
+                <span>Play with genuine self-belief</span>
+              </li>
+              <li className="flex items-start gap-3 text-white">
+                <span className="text-[#0A0A0A] mt-1">✓</span>
+                <span>Recover from mistakes in seconds</span>
+              </li>
+              <li className="flex items-start gap-3 text-white">
+                <span className="text-[#0A0A0A] mt-1">✓</span>
+                <span>Perform consistently</span>
+              </li>
+              <li className="flex items-start gap-3 text-white">
+                <span className="text-[#0A0A0A] mt-1">✓</span>
+                <span>Handle pressure with composure</span>
+              </li>
+              <li className="flex items-start gap-3 text-white">
+                <span className="text-[#0A0A0A] mt-1">✓</span>
+                <span>Love the game again</span>
+              </li>
+            </ul>
           </div>
+        </div>
+
+        {/* The Truth Section */}
+        <div className="text-center mt-12 mb-8">
+          <h3 className="text-3xl md:text-4xl font-bold text-[#0A0A0A] mb-4 uppercase" style={{ fontFamily: 'Barlow Condensed, sans-serif' }}>
+            The truth?
+          </h3>
+          <p className="text-lg md:text-xl text-gray-700 mb-2">
+            <span className="font-bold text-[#0A0A0A]">Talent alone isn't enough.</span>
+          </p>
+          <p className="text-lg md:text-xl text-gray-600">
+            The players who progress are the ones who can handle pressure, bounce back, and believe in themselves.
+          </p>
+        </div>
+
+        {/* Tagline and CTA */}
+        <div className="text-center">
+          <p className="text-xl md:text-2xl font-bold text-[#D92323] mb-8 uppercase tracking-wide" style={{ fontFamily: 'Barlow Condensed, sans-serif' }}>
+            Practical tools. Proven techniques. Real results.
+          </p>
+          <a 
+            href="#services" 
+            className="btn-primary inline-flex items-center gap-2"
+            data-testid="about-cta"
+          >
+            Explore Our Services <ArrowRight size={18} />
+          </a>
         </div>
       </div>
     </section>
