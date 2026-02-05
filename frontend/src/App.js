@@ -420,7 +420,8 @@ const TestimonialsSection = () => {
           {TESTIMONIALS.map((testimonial) => (
             <div 
               key={testimonial.id} 
-              className="testimonial-split-card group flex-shrink-0 w-72 bg-white rounded overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300"
+              className="testimonial-split-card group flex-shrink-0 w-72 rounded overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300"
+              style={{ backgroundColor: '#0A0A0A' }}
               data-testid={`testimonial-${testimonial.id}`}
             >
               {/* Photo Section - No Overlay */}
