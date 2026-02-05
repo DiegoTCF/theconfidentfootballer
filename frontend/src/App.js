@@ -444,8 +444,8 @@ const AboutSection = () => {
             Explore Our Services <ArrowRight size={18} />
           </a>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 };
 
