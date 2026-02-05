@@ -334,14 +334,28 @@ const HeroSection = () => {
 // About Section
 const AboutSection = () => {
   return (
-    <section id="about" className="py-20 md:py-28 px-6 lg:px-12 bg-white relative overflow-hidden" data-testid="about-section">
-      <div className="max-w-4xl mx-auto">
-        {/* Intro */}
-        <div className="text-center mb-12">
-          <p className="text-lg md:text-xl leading-relaxed text-gray-700">
-            <span className="font-bold text-[#0A0A0A]">The Confident Footballer</span> was created because we understand first-hand what it's like to watch your child hold back on the pitch and not express themselves to their full potential.
-          </p>
-        </div>
+    <>
+      {/* Divider between testimonials and about */}
+      <div className="w-full bg-white pt-8">
+        <div className="h-1 bg-gradient-to-r from-transparent via-[#D92323] to-transparent"></div>
+      </div>
+      
+      <section id="about" className="py-20 md:py-28 px-6 lg:px-12 bg-white relative overflow-hidden" data-testid="about-section">
+        <div className="max-w-4xl mx-auto">
+          {/* Title */}
+          <div className="text-center mb-8">
+            <h2 className="text-4xl md:text-5xl font-bold tracking-tight uppercase text-[#0A0A0A]" style={{ fontFamily: 'Barlow Condensed, sans-serif' }}>
+              Building <span className="text-[#D92323]">Confident</span> Footballers
+            </h2>
+            <div className="red-accent-line mx-auto mt-6"></div>
+          </div>
+
+          {/* Intro */}
+          <div className="text-center mb-12">
+            <p className="text-lg md:text-xl leading-relaxed text-gray-700">
+              <span className="font-bold text-[#0A0A0A]">The Confident Footballer</span> was created because we understand first-hand what it's like to watch your child hold back on the pitch and not express themselves to their full potential.
+            </p>
+          </div>
 
         {/* Two Column Layout */}
         <div className="grid md:grid-cols-2 gap-8 md:gap-12">
