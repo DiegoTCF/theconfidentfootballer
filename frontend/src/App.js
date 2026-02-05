@@ -125,6 +125,13 @@ const TESTIMONIALS = [
     quote: "Since finishing the programme three months ago, Zach is in a really good place. In his last 15 performances, there has only been one bad day. The behaviours are still the focus, and the father–son relationship is better than ever. We are seeing a level of consistency that wasn't there before.",
     parent: "Mark Hatfull",
     image: "https://customer-assets.emergentagent.com/job_soccer-confidence-2/artifacts/2r1cwr2i_5.png"
+  },
+  {
+    id: 12,
+    player: "Leon",
+    quote: "You should see him during the game. He was like a Modrić. He was doing everything right. He was real, Leon. Strong, winning tackles, his passing was great, and he wasn't scared of dribble few players.",
+    parent: "Bartek Bacik",
+    image: "https://images.unsplash.com/photo-1599474924187-334a4ae5bd3c?w=600&fit=crop"
   }
 ];
 
