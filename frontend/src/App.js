@@ -717,6 +717,7 @@ function App() {
       <AboutSection />
       <ServicesSection />
       <DiegoSection />
+      <FAQSection />
       <Footer />
     </div>
   );
