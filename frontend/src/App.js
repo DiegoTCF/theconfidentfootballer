@@ -453,48 +453,116 @@ const AboutSection = () => {
 // Services Section
 const ServicesSection = () => {
   return (
-    <section id="services" className="py-20 md:py-32 px-6 lg:px-12 bg-[#F5F5F5]" data-testid="services-section">
-      <div className="max-w-7xl mx-auto">
+    <section id="services" className="py-20 md:py-28 px-6 lg:px-12 bg-[#F5F5F5]" data-testid="services-section">
+      <div className="max-w-6xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-16">
-          <span className="text-sm font-medium tracking-widest uppercase text-[#D92323] mb-4 block" style={{ fontFamily: 'Barlow Condensed, sans-serif' }}>
-            Our Services
-          </span>
-          <h2 className="text-4xl md:text-5xl font-bold tracking-tight uppercase text-[#0A0A0A] mb-6" style={{ fontFamily: 'Barlow Condensed, sans-serif' }}>
-            Choose Your <span className="text-[#D92323]">Path</span> to Success
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight uppercase text-[#0A0A0A] mb-4" style={{ fontFamily: 'Barlow Condensed, sans-serif' }}>
+            How The <span className="text-[#D92323]">Confident Footballer</span> Programme Is Delivered
           </h2>
-          <div className="red-accent-line mx-auto"></div>
+          <p className="text-lg text-gray-600">
+            Flexible options to help your child build confidence and consistency.
+          </p>
+        </div>
+
+        {/* Hero Image - Devices */}
+        <div className="flex justify-center mb-12">
+          <img 
+            src="https://images.unsplash.com/photo-1593062096033-9a26b09da705?w=800&fit=crop"
+            alt="Programme delivery - Online course, Zoom mentorship, and Ebook"
+            className="max-w-3xl w-full rounded-lg shadow-lg"
+            data-testid="services-hero-image"
+          />
         </div>
 
         {/* Service Cards */}
-        <div className="grid md:grid-cols-3 gap-8">
-          {SERVICES.map((service) => {
-            const IconComponent = service.icon;
-            return (
-              <div key={service.id} className="service-card" data-testid={`service-card-${service.id}`}>
-                <div className="mb-6">
-                  <div className="w-14 h-14 bg-[#D92323]/10 flex items-center justify-center mb-4">
-                    <IconComponent size={28} className="text-[#D92323]" />
-                  </div>
-                  <h3 className="text-2xl font-bold uppercase text-[#0A0A0A] mb-3" style={{ fontFamily: 'Barlow Condensed, sans-serif' }}>
-                    {service.title}
-                  </h3>
-                  <p className="text-gray-600 leading-relaxed mb-6">
-                    {service.description}
-                  </p>
+        <div className="grid md:grid-cols-3 gap-6">
+          {/* Online Course */}
+          <div className="bg-white rounded-lg shadow-md overflow-hidden" data-testid="service-card-online-course">
+            <div className="p-6">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-10 h-10 bg-[#D92323]/10 rounded flex items-center justify-center">
+                  <BookOpen className="text-[#D92323]" size={22} />
                 </div>
-                <a
-                  href={service.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn-primary inline-flex items-center gap-2 text-sm w-full justify-center"
-                  data-testid={`service-cta-${service.id}`}
-                >
-                  {service.cta} <ArrowRight size={16} />
-                </a>
+                <h3 className="text-xl font-bold uppercase text-[#0A0A0A]" style={{ fontFamily: 'Barlow Condensed, sans-serif' }}>
+                  Online Course
+                </h3>
               </div>
-            );
-          })}
+              <p className="text-gray-600 text-sm mb-6 flex items-start gap-2">
+                <span className="text-[#D92323] mt-0.5">✓</span>
+                Self-paced video modules and player app for independent learning
+              </p>
+            </div>
+            <a 
+              href="https://www.youthfootballer.com/offers/FpedL4Pg/checkout"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block bg-[#D92323] text-white text-center py-4 font-bold uppercase tracking-wider hover:bg-red-700 transition-colors duration-300"
+              style={{ fontFamily: 'Barlow Condensed, sans-serif' }}
+              data-testid="service-cta-online-course"
+            >
+              <BookOpen className="inline mr-2" size={18} />
+              Online Course
+            </a>
+          </div>
+
+          {/* Individual Mentorship */}
+          <div className="bg-white rounded-lg shadow-md overflow-hidden" data-testid="service-card-mentorship">
+            <div className="p-6">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-10 h-10 bg-[#D92323]/10 rounded flex items-center justify-center">
+                  <Users className="text-[#D92323]" size={22} />
+                </div>
+                <h3 className="text-xl font-bold uppercase text-[#0A0A0A]" style={{ fontFamily: 'Barlow Condensed, sans-serif' }}>
+                  Individual Mentorship
+                </h3>
+              </div>
+              <p className="text-gray-600 text-sm mb-6 flex items-start gap-2">
+                <span className="text-[#D92323] mt-0.5">✓</span>
+                1-to-1 coaching via Zoom with personal support for deeper development
+              </p>
+            </div>
+            <a 
+              href="https://forms.gle/f18mTdsL4seLQwcE7"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block bg-[#D92323] text-white text-center py-4 font-bold uppercase tracking-wider hover:bg-red-700 transition-colors duration-300"
+              style={{ fontFamily: 'Barlow Condensed, sans-serif' }}
+              data-testid="service-cta-mentorship"
+            >
+              <Users className="inline mr-2" size={18} />
+              Individual Mentorship
+            </a>
+          </div>
+
+          {/* The Ebook */}
+          <div className="bg-white rounded-lg shadow-md overflow-hidden" data-testid="service-card-ebook">
+            <div className="p-6">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-10 h-10 bg-[#D92323]/10 rounded flex items-center justify-center">
+                  <FileText className="text-[#D92323]" size={22} />
+                </div>
+                <h3 className="text-xl font-bold uppercase text-[#0A0A0A]" style={{ fontFamily: 'Barlow Condensed, sans-serif' }}>
+                  The Ebook
+                </h3>
+              </div>
+              <p className="text-gray-600 text-sm mb-6 flex items-start gap-2">
+                <span className="text-[#D92323] mt-0.5">✓</span>
+                In-depth guide with practical mindset strategies for players & parents
+              </p>
+            </div>
+            <a 
+              href="https://www.youthfootballer.com/offers/vvS23JNp/checkout"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block bg-[#D92323] text-white text-center py-4 font-bold uppercase tracking-wider hover:bg-red-700 transition-colors duration-300"
+              style={{ fontFamily: 'Barlow Condensed, sans-serif' }}
+              data-testid="service-cta-ebook"
+            >
+              <FileText className="inline mr-2" size={18} />
+              The Ebook
+            </a>
+          </div>
         </div>
       </div>
     </section>
