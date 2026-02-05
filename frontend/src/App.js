@@ -208,7 +208,7 @@ const FAQ_DATA = [
   }
 ];
 
-const DIEGO_IMAGE = "https://images.unsplash.com/photo-1561701202-64e5f6aa443f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzd8MHwxfHNlYXJjaHwxfHxzb2NjZXIlMjBjb2FjaCUyMHRhbGtpbmclMjB0byUyMHBsYXllcnxlbnwwfHx8fDE3NzAxMzcwOTF8MA&ixlib=rb-4.1.0&q=85";
+const DIEGO_IMAGE = "https://customer-assets.emergentagent.com/job_soccer-confidence-2/artifacts/zhzt113x_Diego%20pagliuso.jpeg";
 
 // Navigation Component
 const Navigation = ({ scrolled, mobileMenuOpen, setMobileMenuOpen }) => {
