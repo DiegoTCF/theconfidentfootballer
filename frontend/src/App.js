@@ -428,7 +428,7 @@ const TestimonialsSection = () => {
                 <img
                   src={testimonial.image}
                   alt={testimonial.player}
-                  className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                  className={`w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 ${testimonial.imagePosition === 'center' ? 'object-center' : 'object-top'}`}
                 />
               </div>
               
