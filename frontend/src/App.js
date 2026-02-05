@@ -3,7 +3,7 @@ import "@/App.css";
 import { Menu, X, BookOpen, Users, FileText, Star, Quote, ArrowRight, Trophy, Brain, Target, ChevronDown } from "lucide-react";
 
 // Constants
-const HERO_BANNER = "https://customer-assets.emergentagent.com/job_soccer-confidence-2/artifacts/kpy05jtn_LogoChatGPT2.png";
+const HERO_BANNER = "https://customer-assets.emergentagent.com/job_soccer-confidence-2/artifacts/e8r6n1g9_The%20Confident%20Footballer-8.png";
 
 const SERVICES = [
   {
