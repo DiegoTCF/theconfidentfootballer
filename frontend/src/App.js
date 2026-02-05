@@ -136,6 +136,78 @@ const TESTIMONIALS = [
   }
 ];
 
+// FAQ Data
+const FAQ_DATA = [
+  {
+    question: "What is The Confident Footballer?",
+    answer: "The Confident Footballer is a mindset training programme for young footballers designed to help players build confidence, consistency, and emotional control under pressure.\n\nIt is delivered through two pathways: a self-paced online course or a guided individual mentorship, depending on the level of support needed."
+  },
+  {
+    question: "What is the difference between the online course and the Individual Mentorship?",
+    answer: "The online course is self-paced and designed for independent learning. It gives players the tools and understanding to start working on their mindset in their own time.\n\nThe Individual Mentorship is a 12-week, one-to-one guided process with Diego. It includes personalised sessions, player support, and parent involvement to create deeper and more consistent change."
+  },
+  {
+    question: "Are the sessions online?",
+    answer: "Yes. All sessions are delivered online via Zoom, making them easy to attend from anywhere and fit around school and training schedules."
+  },
+  {
+    question: "Can I book individual sessions?",
+    answer: "No. The Individual Mentorship is a structured 12-week process. Confidence and consistency are built over time, which is why one-off sessions are not offered."
+  },
+  {
+    question: "What happens after the 12 weeks?",
+    answer: "At the end of the 12 weeks, the initial part of the process comes to a close and we review the progress, changes, and key gains made during the mentorship.\n\nFrom there, different pathways are available for players who choose to continue. Some players transition into ongoing support, and others work with Diego on a longer-term basis depending on their needs and goals."
+  },
+  {
+    question: "Does the online course include one-to-one sessions?",
+    answer: "No. The online course is fully self-paced and does not include one-to-one coaching."
+  },
+  {
+    question: "Does the online course include access to the app?",
+    answer: "Yes. When you join the online course, you receive access to the full video library and the player app to support learning and reflection."
+  },
+  {
+    question: "How long do I have access to the online course?",
+    answer: "You receive 12 months of access to the online course and video library."
+  },
+  {
+    question: "If I join the Individual Mentorship, do I get access to the online platform and apps?",
+    answer: "Yes. The Individual Mentorship includes full access to the online course, the player app, and a dedicated Parents App where you can share feedback with Diego and track your child's progress throughout the process."
+  },
+  {
+    question: "What age group is The Confident Footballer for?",
+    answer: "The programme is designed for young footballers aged 8 to 18.\n\nThe online course can also be used by younger players when supported by a parent."
+  },
+  {
+    question: "Is this suitable for academy players and grassroots players?",
+    answer: "Yes. The principles apply at all levels. Mindset skills such as confidence, focus, and emotional control are essential for every young player."
+  },
+  {
+    question: "Will this help my child if they are confident sometimes?",
+    answer: "Yes. Many players feel confident at times. The programme focuses on helping players stay confident when things go wrong, not just when everything is going well."
+  },
+  {
+    question: "Does this replace football coaching or technical training?",
+    answer: "No. The Confident Footballer works alongside football coaching. It supports players in expressing their technical ability more consistently under pressure."
+  },
+  {
+    question: "How involved do parents need to be?",
+    answer: "Parents are gently involved, especially in the Individual Mentorship. You will receive guidance on how to support your child in a positive way without adding pressure."
+  },
+  {
+    question: "How quickly will we see changes?",
+    answer: "Every child is different. Some changes appear early, while others develop gradually. This is why the programme follows a structured process rather than quick fixes."
+  },
+  {
+    question: "Is this therapy or counselling?",
+    answer: "No. This is performance mindset training focused on confidence, behaviours, and emotional skills within football."
+  },
+  {
+    question: "Is the discovery call free?",
+    answer: "Yes. The discovery call is completely free. After completing the application form, families who are a good fit will be invited to book a call."
+  }
+];
+
 const DIEGO_IMAGE = "https://images.unsplash.com/photo-1561701202-64e5f6aa443f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzd8MHwxfHNlYXJjaHwxfHxzb2NjZXIlMjBjb2FjaCUyMHRhbGtpbmclMjB0byUyMHBsYXllcnxlbnwwfHx8fDE3NzAxMzcwOTF8MA&ixlib=rb-4.1.0&q=85";
 
 // Navigation Component
