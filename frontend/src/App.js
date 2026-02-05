@@ -3,7 +3,7 @@ import "@/App.css";
 import { Menu, X, BookOpen, Users, FileText, Star, Quote, ArrowRight, Trophy, Brain, Target, ChevronDown } from "lucide-react";
 
 // Constants
-const HERO_BANNER = "https://customer-assets.emergentagent.com/job_31770e76-de7f-4d90-b907-c512e37565a9/artifacts/yqwxs7zq_The%20confident%20footballer%20banner%20design.png";
+const HERO_BANNER = "https://customer-assets.emergentagent.com/job_soccer-confidence-2/artifacts/kpy05jtn_LogoChatGPT2.png";
 
 const SERVICES = [
   {
@@ -234,18 +234,13 @@ const Navigation = ({ scrolled, mobileMenuOpen, setMobileMenuOpen }) => {
 const HeroSection = () => {
   return (
     <section className="hero-section" data-testid="hero-section">
-      <div className="relative w-full flex items-center justify-center px-6 py-8 md:py-12">
+      <div className="relative w-full flex items-center justify-center px-6 py-4 md:py-6">
         <img
           src={HERO_BANNER}
           alt="The Confident Footballer"
           className="hero-banner"
           data-testid="hero-banner"
         />
-      </div>
-      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <a href="#about" className="text-white/60 hover:text-white transition-colors duration-300" data-testid="scroll-indicator">
-          <ArrowRight size={24} className="rotate-90" />
-        </a>
       </div>
     </section>
   );
