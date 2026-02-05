@@ -759,6 +759,17 @@ const TestimonialsSection = () => {
           })}
         </div>
       </div>
+
+      {/* Get Started CTA */}
+      <div className="text-center mt-12 px-6">
+        <a 
+          href="#services" 
+          className="btn-primary inline-flex items-center gap-2"
+          data-testid="testimonials-cta"
+        >
+          Get Started <ArrowRight size={18} />
+        </a>
+      </div>
     </section>
   );
 };
