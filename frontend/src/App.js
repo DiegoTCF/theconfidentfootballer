@@ -469,7 +469,7 @@ const ServicesSection = () => {
           <div className="bg-white rounded-lg shadow-md overflow-hidden" data-testid="service-card-online-course">
             <div className="h-48 overflow-hidden">
               <img 
-                src="https://customer-assets.emergentagent.com/job_soccer-confidence-2/artifacts/ankijkat_WhatsApp%20Image%202026-01-08%20at%2017.56.53%20%282%29.jpeg"
+                src="https://customer-assets.emergentagent.com/job_soccer-confidence-2/artifacts/ku0z2mer_MODULES%20COVER-4.png"
                 alt="Online Course"
                 className="w-full h-full object-cover object-center"
               />
@@ -504,9 +504,9 @@ const ServicesSection = () => {
           <div className="bg-white rounded-lg shadow-md overflow-hidden" data-testid="service-card-mentorship">
             <div className="h-48 overflow-hidden">
               <img 
-                src="https://customer-assets.emergentagent.com/job_soccer-confidence-2/artifacts/myibs0gn_Frankie%20Tournament-3.png"
+                src="https://customer-assets.emergentagent.com/job_soccer-confidence-2/artifacts/ankijkat_WhatsApp%20Image%202026-01-08%20at%2017.56.53%20%282%29.jpeg"
                 alt="Individual Mentorship"
-                className="w-full h-full object-cover object-top"
+                className="w-full h-full object-cover object-center"
               />
             </div>
             <div className="p-6">
@@ -537,11 +537,11 @@ const ServicesSection = () => {
 
           {/* The Ebook */}
           <div className="bg-white rounded-lg shadow-md overflow-hidden" data-testid="service-card-ebook">
-            <div className="h-48 overflow-hidden bg-[#2d2d2d] flex items-center justify-center">
+            <div className="h-48 overflow-hidden bg-[#0A0A0A]">
               <img 
-                src="https://customer-assets.emergentagent.com/job_soccer-confidence-2/artifacts/5391vyrw_Red%20and%20Black%20Male%20Life%20Coach%20Ebook%20Cover-3.png"
+                src="https://customer-assets.emergentagent.com/job_soccer-confidence-2/artifacts/x7qrpwx5_60af534-826-5be3-aa51-f642f86eccb_Handling_Comparisons_with_Other_Players_-_Is_It_Always_Bad_to_Compare_When_and_How_Can_You_Use_Others_as_a_Benchmark-9.webp"
                 alt="The Ebook"
-                className="h-full object-contain"
+                className="w-full h-full object-cover object-center"
               />
             </div>
             <div className="p-6">
