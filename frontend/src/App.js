@@ -419,30 +419,31 @@ const TestimonialsSection = () => {
           {TESTIMONIALS.map((testimonial) => (
             <div 
               key={testimonial.id} 
-              className="testimonial-overlay-card group relative h-72 w-80 flex-shrink-0 overflow-hidden cursor-pointer"
+              className="testimonial-split-card group flex-shrink-0 w-72 bg-white rounded overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300"
               data-testid={`testimonial-${testimonial.id}`}
             >
-              {/* Background Image */}
-              <img
-                src={testimonial.image}
-                alt={testimonial.player}
-                className="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-110"
-              />
+              {/* Photo Section - No Overlay */}
+              <div className="relative h-56 overflow-hidden">
+                <img
+                  src={testimonial.image}
+                  alt={testimonial.player}
+                  className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                />
+              </div>
               
-              {/* Dark Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-black/30 transition-opacity duration-300"></div>
-              
-              {/* Content */}
-              <div className="absolute inset-0 p-5 flex flex-col justify-end transition-transform duration-300 group-hover:-translate-y-2">
-                <Quote size={24} className="text-[#D92323] mb-2 opacity-80" />
-                <p className="text-white text-sm leading-relaxed mb-3 italic line-clamp-4">
-                  "{testimonial.quote}"
-                </p>
-                <p className="text-white text-sm">
+              {/* Quote Section */}
+              <div className="bg-[#0A0A0A] p-5 min-h-[180px] flex flex-col justify-between">
+                <div>
+                  <Quote size={20} className="text-[#D92323] mb-2" />
+                  <p className="text-white text-sm leading-relaxed italic line-clamp-4">
+                    "{testimonial.quote}"
+                  </p>
+                </div>
+                <p className="text-sm mt-4">
                   <span className="text-[#D92323] font-bold uppercase tracking-wider" style={{ fontFamily: 'Barlow Condensed, sans-serif' }}>
                     {testimonial.player}'s parent
                   </span>
-                  <span className="text-gray-300"> — {testimonial.parent}</span>
+                  <span className="text-gray-400 block text-xs mt-1">{testimonial.parent}</span>
                 </p>
               </div>
             </div>
