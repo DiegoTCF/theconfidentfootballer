@@ -237,7 +237,8 @@ const Navigation = ({ scrolled, mobileMenuOpen, setMobileMenuOpen }) => {
             {/* Mobile Get Started Button */}
             <a
               href="#services"
-              className="md:hidden btn-primary text-xs px-4 py-2"
+              className="md:hidden bg-[#D92323] text-white text-xs px-3 py-1.5 font-bold uppercase tracking-wider rounded hover:bg-red-700 transition-colors"
+              style={{ fontFamily: 'Barlow Condensed, sans-serif' }}
               data-testid="mobile-get-started-top"
             >
               Get Started
