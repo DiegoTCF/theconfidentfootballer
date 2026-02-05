@@ -433,7 +433,7 @@ const TestimonialsSection = () => {
               </div>
               
               {/* Quote Section */}
-              <div className="bg-[#0A0A0A] p-5 min-h-[180px] flex flex-col justify-between">
+              <div className="p-5 min-h-[180px] flex flex-col justify-between" style={{ backgroundColor: '#0A0A0A' }}>
                 <div>
                   <Quote size={20} className="text-[#D92323] mb-2" />
                   <p className="text-white text-sm leading-relaxed italic line-clamp-4">
