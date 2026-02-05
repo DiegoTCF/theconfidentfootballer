@@ -424,6 +424,12 @@ const DiegoSection = () => {
 
 // Testimonials Section
 const TestimonialsSection = () => {
+  const [expandedId, setExpandedId] = useState(null);
+
+  const toggleExpand = (id) => {
+    setExpandedId(expandedId === id ? null : id);
+  };
+
   return (
     <section id="testimonials" className="py-16 md:py-20 bg-white" data-testid="testimonials-section">
       <div className="max-w-7xl mx-auto px-6 lg:px-12 mb-10">
@@ -439,39 +445,55 @@ const TestimonialsSection = () => {
       {/* Horizontal Scrolling Gallery */}
       <div className="overflow-x-auto scrollbar-hide pb-4">
         <div className="flex gap-6 px-6 lg:px-12" style={{ width: 'max-content' }}>
-          {TESTIMONIALS.map((testimonial) => (
-            <div 
-              key={testimonial.id} 
-              className="testimonial-split-card group flex-shrink-0 w-72 rounded overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300"
-              style={{ backgroundColor: '#0A0A0A' }}
-              data-testid={`testimonial-${testimonial.id}`}
-            >
-              {/* Photo Section - No Overlay */}
-              <div className="relative h-56 overflow-hidden bg-[#0A0A0A]">
-                <img
-                  src={testimonial.image}
-                  alt={testimonial.player}
-                  className={`w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 ${testimonial.imagePosition === 'center' ? 'object-center' : 'object-top'}`}
-                />
-              </div>
-              
-              {/* Quote Section */}
-              <div className="p-5 min-h-[180px] flex flex-col justify-between" style={{ backgroundColor: '#0A0A0A' }}>
-                <div>
-                  <Quote size={20} className="text-[#D92323] mb-2" />
-                  <p className="text-white text-sm leading-relaxed italic line-clamp-4">
-                    "{testimonial.quote}"
+          {TESTIMONIALS.map((testimonial) => {
+            const isExpanded = expandedId === testimonial.id;
+            const isLongQuote = testimonial.quote.length > 150;
+            
+            return (
+              <div 
+                key={testimonial.id} 
+                className="testimonial-split-card group flex-shrink-0 w-72 rounded overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 cursor-pointer"
+                style={{ backgroundColor: '#0A0A0A' }}
+                data-testid={`testimonial-${testimonial.id}`}
+                onClick={() => isLongQuote && toggleExpand(testimonial.id)}
+              >
+                {/* Photo Section - No Overlay */}
+                <div className="relative h-56 overflow-hidden bg-[#0A0A0A]">
+                  <img
+                    src={testimonial.image}
+                    alt={testimonial.player}
+                    className={`w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 ${testimonial.imagePosition === 'center' ? 'object-center' : 'object-top'}`}
+                  />
+                </div>
+                
+                {/* Quote Section */}
+                <div className="p-5 flex flex-col justify-between transition-all duration-300" style={{ backgroundColor: '#0A0A0A', minHeight: isExpanded ? 'auto' : '180px' }}>
+                  <div>
+                    <Quote size={20} className="text-[#D92323] mb-2" />
+                    <p className={`text-white text-sm leading-relaxed italic ${isExpanded ? '' : 'line-clamp-4'}`}>
+                      "{testimonial.quote}"
+                    </p>
+                    {isLongQuote && (
+                      <button 
+                        className="text-[#D92323] text-xs mt-2 hover:underline flex items-center gap-1"
+                        onClick={(e) => { e.stopPropagation(); toggleExpand(testimonial.id); }}
+                        data-testid={`testimonial-expand-${testimonial.id}`}
+                      >
+                        {isExpanded ? 'Show less' : 'Read more'}
+                        <ChevronDown size={14} className={`transition-transform duration-300 ${isExpanded ? 'rotate-180' : ''}`} />
+                      </button>
+                    )}
+                  </div>
+                  <p className="text-sm mt-4">
+                    <span className="text-[#D92323] font-bold uppercase tracking-wider" style={{ fontFamily: 'Barlow Condensed, sans-serif' }}>
+                      {testimonial.player}'s parent
+                    </span>
+                    <span className="text-gray-400 block text-xs mt-1">{testimonial.parent}</span>
                   </p>
                 </div>
-                <p className="text-sm mt-4">
-                  <span className="text-[#D92323] font-bold uppercase tracking-wider" style={{ fontFamily: 'Barlow Condensed, sans-serif' }}>
-                    {testimonial.player}'s parent
-                  </span>
-                  <span className="text-gray-400 block text-xs mt-1">{testimonial.parent}</span>
-                </p>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>
