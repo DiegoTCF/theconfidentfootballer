@@ -452,12 +452,21 @@ const AboutSection = () => {
 
 // Services Section
 const ServicesSection = () => {
+  const [expandedService, setExpandedService] = useState(null);
+
+  const toggleService = (service) => {
+    setExpandedService(expandedService === service ? null : service);
+  };
+
   return (
-    <section id="services" className="py-20 md:py-28 px-6 lg:px-12 bg-[#F5F5F5]" data-testid="services-section">
+    <section id="services" className="py-20 md:py-28 px-6 lg:px-12 bg-[#0A0A0A]" data-testid="services-section">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight uppercase text-[#0A0A0A] mb-4" style={{ fontFamily: 'Barlow Condensed, sans-serif' }}>
+          <span className="text-sm font-medium tracking-widest uppercase text-[#D92323] mb-4 block" style={{ fontFamily: 'Barlow Condensed, sans-serif' }}>
+            Our Programmes
+          </span>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight uppercase text-white mb-4" style={{ fontFamily: 'Barlow Condensed, sans-serif' }}>
             The <span className="text-[#D92323]">Confident Footballer</span> Programmes
           </h2>
           <div className="red-accent-line mx-auto"></div>
@@ -471,22 +480,38 @@ const ServicesSection = () => {
               <img 
                 src="https://customer-assets.emergentagent.com/job_soccer-confidence-2/artifacts/ku0z2mer_MODULES%20COVER-4.png"
                 alt="Online Course"
-                className="w-full h-full object-cover object-center"
+                className="w-full h-full object-cover object-right"
               />
             </div>
             <div className="p-6">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 bg-[#D92323]/10 rounded flex items-center justify-center">
-                  <BookOpen className="text-[#D92323]" size={22} />
-                </div>
-                <h3 className="text-xl font-bold uppercase text-[#0A0A0A]" style={{ fontFamily: 'Barlow Condensed, sans-serif' }}>
-                  Online Course
-                </h3>
-              </div>
-              <p className="text-gray-600 text-sm mb-4 flex items-start gap-2">
-                <span className="text-[#D92323] mt-0.5">✓</span>
-                Self-paced video modules and player app for independent learning
+              <h3 className="text-xl font-bold uppercase text-[#0A0A0A] mb-3" style={{ fontFamily: 'Barlow Condensed, sans-serif' }}>
+                The Confident Footballer – Online Course
+              </h3>
+              <p className="text-gray-600 text-sm mb-3">
+                A self-paced mindset training programme for young footballers and their parents, designed to build confidence, consistency, and emotional control.
               </p>
+              
+              {expandedService === 'course' && (
+                <div className="text-gray-600 text-sm mb-3 animate-fadeIn">
+                  <p className="font-semibold text-[#0A0A0A] mb-2">What's included:</p>
+                  <ul className="space-y-1">
+                    <li className="flex items-start gap-2"><span className="text-[#D92323]">•</span> Over 70 engaging lessons with videos, quizzes, and mindset tools</li>
+                    <li className="flex items-start gap-2"><span className="text-[#D92323]">•</span> Interactive quizzes and simple assessments</li>
+                    <li className="flex items-start gap-2"><span className="text-[#D92323]">•</span> Access to the exclusive player app to track progress</li>
+                    <li className="flex items-start gap-2"><span className="text-[#D92323]">•</span> Bonus workshops with specialist guests</li>
+                    <li className="flex items-start gap-2"><span className="text-[#D92323]">•</span> Fully accessible on mobile and desktop</li>
+                    <li className="flex items-start gap-2"><span className="text-[#D92323]">•</span> One year of access, including all future updates</li>
+                  </ul>
+                </div>
+              )}
+              
+              <button 
+                onClick={() => toggleService('course')}
+                className="text-[#D92323] text-sm font-medium flex items-center gap-1 hover:underline mb-3"
+              >
+                {expandedService === 'course' ? 'Show less' : 'See what\'s included'}
+                <ChevronDown size={16} className={`transition-transform duration-300 ${expandedService === 'course' ? 'rotate-180' : ''}`} />
+              </button>
             </div>
             <a 
               href="https://www.youthfootballer.com/offers/FpedL4Pg/checkout"
@@ -510,18 +535,27 @@ const ServicesSection = () => {
               />
             </div>
             <div className="p-6">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 bg-[#D92323]/10 rounded flex items-center justify-center">
-                  <Users className="text-[#D92323]" size={22} />
-                </div>
-                <h3 className="text-xl font-bold uppercase text-[#0A0A0A]" style={{ fontFamily: 'Barlow Condensed, sans-serif' }}>
-                  Individual Mentorship
-                </h3>
-              </div>
-              <p className="text-gray-600 text-sm mb-4 flex items-start gap-2">
-                <span className="text-[#D92323] mt-0.5">✓</span>
-                1-to-1 coaching via Zoom with personal support for deeper development
+              <h3 className="text-xl font-bold uppercase text-[#0A0A0A] mb-3" style={{ fontFamily: 'Barlow Condensed, sans-serif' }}>
+                Individual Mentorship (12 Weeks)
+              </h3>
+              <p className="text-gray-600 text-sm mb-3">
+                A 12-week one-to-one mentorship designed for players who need personalised support and guidance.
               </p>
+              
+              {expandedService === 'mentorship' && (
+                <div className="text-gray-600 text-sm mb-3 animate-fadeIn">
+                  <p className="mb-2">The programme includes weekly sessions delivered via Zoom, tailored to the player's specific challenges, as well as structured parent involvement to support the journey away from the pitch.</p>
+                  <p>This option provides deeper accountability, clarity, and long-term confidence development.</p>
+                </div>
+              )}
+              
+              <button 
+                onClick={() => toggleService('mentorship')}
+                className="text-[#D92323] text-sm font-medium flex items-center gap-1 hover:underline mb-3"
+              >
+                {expandedService === 'mentorship' ? 'Show less' : 'Learn more'}
+                <ChevronDown size={16} className={`transition-transform duration-300 ${expandedService === 'mentorship' ? 'rotate-180' : ''}`} />
+              </button>
             </div>
             <a 
               href="https://forms.gle/f18mTdsL4seLQwcE7"
@@ -545,18 +579,26 @@ const ServicesSection = () => {
               />
             </div>
             <div className="p-6">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 bg-[#D92323]/10 rounded flex items-center justify-center">
-                  <FileText className="text-[#D92323]" size={22} />
-                </div>
-                <h3 className="text-xl font-bold uppercase text-[#0A0A0A]" style={{ fontFamily: 'Barlow Condensed, sans-serif' }}>
-                  The Ebook
-                </h3>
-              </div>
-              <p className="text-gray-600 text-sm mb-4 flex items-start gap-2">
-                <span className="text-[#D92323] mt-0.5">✓</span>
-                In-depth guide with practical mindset strategies for players & parents
+              <h3 className="text-xl font-bold uppercase text-[#0A0A0A] mb-3" style={{ fontFamily: 'Barlow Condensed, sans-serif' }}>
+                Maximum Confidence eBook
+              </h3>
+              <p className="text-gray-600 text-sm mb-3">
+                A practical guide for parents and players, introducing the mindset principles and behaviours used inside The Confident Footballer programme.
               </p>
+              
+              {expandedService === 'ebook' && (
+                <div className="text-gray-600 text-sm mb-3 animate-fadeIn">
+                  <p>Ideal for families who want to understand the approach and start supporting their child's confidence in a positive, pressure-free way.</p>
+                </div>
+              )}
+              
+              <button 
+                onClick={() => toggleService('ebook')}
+                className="text-[#D92323] text-sm font-medium flex items-center gap-1 hover:underline mb-3"
+              >
+                {expandedService === 'ebook' ? 'Show less' : 'Learn more'}
+                <ChevronDown size={16} className={`transition-transform duration-300 ${expandedService === 'ebook' ? 'rotate-180' : ''}`} />
+              </button>
             </div>
             <a 
               href="https://www.youthfootballer.com/offers/vvS23JNp/checkout"
