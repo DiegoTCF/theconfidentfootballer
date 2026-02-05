@@ -233,20 +233,27 @@ const Navigation = ({ scrolled, mobileMenuOpen, setMobileMenuOpen }) => {
 // Hero Section
 const HeroSection = () => {
   return (
-    <section className="hero-section" data-testid="hero-section">
-      <div className="relative w-full flex items-center justify-center px-6 py-4 md:py-6">
-        <img
-          src={HERO_BANNER}
-          alt="The Confident Footballer"
-          className="hero-banner"
-          data-testid="hero-banner"
-        />
-      </div>
-      {/* Divider */}
-      <div className="w-full">
+    <>
+      <section className="hero-section" data-testid="hero-section">
+        <div className="relative w-full flex items-center justify-center px-6 py-4 md:py-6">
+          <img
+            src={HERO_BANNER}
+            alt="The Confident Footballer"
+            className="hero-banner"
+            data-testid="hero-banner"
+          />
+        </div>
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+          <a href="#testimonials" className="text-white/60 hover:text-white transition-colors duration-300" data-testid="scroll-indicator">
+            <ArrowRight size={24} className="rotate-90" />
+          </a>
+        </div>
+      </section>
+      {/* Divider between hero and testimonials */}
+      <div className="w-full bg-[#0A0A0A] pb-4">
         <div className="h-1 bg-gradient-to-r from-transparent via-[#D92323] to-transparent"></div>
       </div>
-    </section>
+    </>
   );
 };
 
