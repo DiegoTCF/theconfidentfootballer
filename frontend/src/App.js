@@ -632,17 +632,17 @@ const DiegoSection = () => {
   return (
     <section id="diego" className="py-20 md:py-28 px-6 lg:px-12 bg-[#F5F5F5] relative overflow-hidden" data-testid="diego-section">
       <div className="max-w-6xl mx-auto">
-        {/* Mobile Layout - Photo with overlay title */}
+        {/* Mobile Layout - Photo with solid black title bar */}
         <div className="md:hidden mb-8">
           <div className="relative">
             <img
               src={DIEGO_IMAGE}
               alt="Diego - The Confident Footballer founder"
-              className="w-full rounded-lg shadow-lg"
+              className="w-full rounded-t-lg"
             />
-            {/* Overlay Title */}
-            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 via-black/70 to-transparent p-6 rounded-b-lg">
-              <h2 className="text-2xl font-bold tracking-tight text-white" style={{ fontFamily: 'Barlow Condensed, sans-serif' }}>
+            {/* Solid Black Title Bar */}
+            <div className="bg-[#0A0A0A] p-5 rounded-b-lg">
+              <h2 className="text-xl font-bold tracking-tight text-white" style={{ fontFamily: 'Barlow Condensed, sans-serif' }}>
                 Hi, I'm <span className="text-[#D92323]">Diego</span>, the creator of The Confident Footballer.
               </h2>
             </div>
