@@ -521,7 +521,7 @@ const ServicesSection = () => {
               style={{ fontFamily: 'Barlow Condensed, sans-serif' }}
               data-testid="service-cta-online-course"
             >
-              Online Course
+              Start Online Course
             </a>
           </div>
 
@@ -565,7 +565,7 @@ const ServicesSection = () => {
               style={{ fontFamily: 'Barlow Condensed, sans-serif' }}
               data-testid="service-cta-mentorship"
             >
-              Individual Mindset Coaching
+              Apply for Individual Mindset Coaching
             </a>
           </div>
 
@@ -608,7 +608,7 @@ const ServicesSection = () => {
               style={{ fontFamily: 'Barlow Condensed, sans-serif' }}
               data-testid="service-cta-ebook"
             >
-              The Ebook
+              Get the Ebook
             </a>
           </div>
         </div>
