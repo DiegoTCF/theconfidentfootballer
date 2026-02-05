@@ -475,7 +475,7 @@ const ServicesSection = () => {
         {/* Service Cards */}
         <div className="grid md:grid-cols-3 gap-6">
           {/* Online Course */}
-          <div className="bg-white rounded-lg shadow-md overflow-hidden" data-testid="service-card-online-course">
+          <div className="bg-white rounded-lg shadow-md overflow-hidden flex flex-col" data-testid="service-card-online-course">
             <div className="h-48 overflow-hidden">
               <img 
                 src="https://customer-assets.emergentagent.com/job_soccer-confidence-2/artifacts/ku0z2mer_MODULES%20COVER-4.png"
@@ -483,7 +483,7 @@ const ServicesSection = () => {
                 className="w-full h-full object-cover object-right"
               />
             </div>
-            <div className="p-6">
+            <div className="p-6 flex-grow flex flex-col">
               <h3 className="text-xl font-bold uppercase text-[#0A0A0A] mb-3" style={{ fontFamily: 'Barlow Condensed, sans-serif' }}>
                 The Confident Footballer – Online Course
               </h3>
@@ -507,7 +507,7 @@ const ServicesSection = () => {
               
               <button 
                 onClick={() => toggleService('course')}
-                className="text-[#D92323] text-sm font-medium flex items-center gap-1 hover:underline mb-3"
+                className="text-[#D92323] text-sm font-medium flex items-center gap-1 hover:underline mt-auto mb-3"
               >
                 {expandedService === 'course' ? 'Show less' : 'See what\'s included'}
                 <ChevronDown size={16} className={`transition-transform duration-300 ${expandedService === 'course' ? 'rotate-180' : ''}`} />
@@ -525,18 +525,18 @@ const ServicesSection = () => {
             </a>
           </div>
 
-          {/* Individual Mentorship */}
-          <div className="bg-white rounded-lg shadow-md overflow-hidden" data-testid="service-card-mentorship">
+          {/* Individual Mindset Coaching */}
+          <div className="bg-white rounded-lg shadow-md overflow-hidden flex flex-col" data-testid="service-card-mentorship">
             <div className="h-48 overflow-hidden">
               <img 
                 src="https://customer-assets.emergentagent.com/job_soccer-confidence-2/artifacts/ankijkat_WhatsApp%20Image%202026-01-08%20at%2017.56.53%20%282%29.jpeg"
-                alt="Individual Mentorship"
+                alt="Individual Mindset Coaching"
                 className="w-full h-full object-cover object-center"
               />
             </div>
-            <div className="p-6">
+            <div className="p-6 flex-grow flex flex-col">
               <h3 className="text-xl font-bold uppercase text-[#0A0A0A] mb-3" style={{ fontFamily: 'Barlow Condensed, sans-serif' }}>
-                Individual Mentorship (12 Weeks)
+                Individual Mindset Coaching (12 Weeks)
               </h3>
               <p className="text-gray-600 text-sm mb-3">
                 A 12-week one-to-one mentorship designed for players who need personalised support and guidance.
@@ -551,7 +551,7 @@ const ServicesSection = () => {
               
               <button 
                 onClick={() => toggleService('mentorship')}
-                className="text-[#D92323] text-sm font-medium flex items-center gap-1 hover:underline mb-3"
+                className="text-[#D92323] text-sm font-medium flex items-center gap-1 hover:underline mt-auto mb-3"
               >
                 {expandedService === 'mentorship' ? 'Show less' : 'Learn more'}
                 <ChevronDown size={16} className={`transition-transform duration-300 ${expandedService === 'mentorship' ? 'rotate-180' : ''}`} />
@@ -565,12 +565,12 @@ const ServicesSection = () => {
               style={{ fontFamily: 'Barlow Condensed, sans-serif' }}
               data-testid="service-cta-mentorship"
             >
-              Individual Mentorship
+              Individual Mindset Coaching
             </a>
           </div>
 
           {/* The Ebook */}
-          <div className="bg-white rounded-lg shadow-md overflow-hidden" data-testid="service-card-ebook">
+          <div className="bg-white rounded-lg shadow-md overflow-hidden flex flex-col" data-testid="service-card-ebook">
             <div className="h-48 overflow-hidden bg-[#0A0A0A]">
               <img 
                 src="https://customer-assets.emergentagent.com/job_soccer-confidence-2/artifacts/x7qrpwx5_60af534-826-5be3-aa51-f642f86eccb_Handling_Comparisons_with_Other_Players_-_Is_It_Always_Bad_to_Compare_When_and_How_Can_You_Use_Others_as_a_Benchmark-9.webp"
@@ -578,7 +578,7 @@ const ServicesSection = () => {
                 className="w-full h-full object-cover object-center"
               />
             </div>
-            <div className="p-6">
+            <div className="p-6 flex-grow flex flex-col">
               <h3 className="text-xl font-bold uppercase text-[#0A0A0A] mb-3" style={{ fontFamily: 'Barlow Condensed, sans-serif' }}>
                 Maximum Confidence eBook
               </h3>
@@ -594,7 +594,7 @@ const ServicesSection = () => {
               
               <button 
                 onClick={() => toggleService('ebook')}
-                className="text-[#D92323] text-sm font-medium flex items-center gap-1 hover:underline mb-3"
+                className="text-[#D92323] text-sm font-medium flex items-center gap-1 hover:underline mt-auto mb-3"
               >
                 {expandedService === 'ebook' ? 'Show less' : 'Learn more'}
                 <ChevronDown size={16} className={`transition-transform duration-300 ${expandedService === 'ebook' ? 'rotate-180' : ''}`} />
