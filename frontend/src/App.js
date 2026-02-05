@@ -458,27 +458,22 @@ const ServicesSection = () => {
         {/* Header */}
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight uppercase text-[#0A0A0A] mb-4" style={{ fontFamily: 'Barlow Condensed, sans-serif' }}>
-            How The <span className="text-[#D92323]">Confident Footballer</span> Programme Is Delivered
+            The <span className="text-[#D92323]">Confident Footballer</span> Programmes
           </h2>
-          <p className="text-lg text-gray-600">
-            Flexible options to help your child build confidence and consistency.
-          </p>
-        </div>
-
-        {/* Hero Image - Devices */}
-        <div className="flex justify-center mb-12">
-          <img 
-            src="https://images.unsplash.com/photo-1593062096033-9a26b09da705?w=800&fit=crop"
-            alt="Programme delivery - Online course, Zoom mentorship, and Ebook"
-            className="max-w-3xl w-full rounded-lg shadow-lg"
-            data-testid="services-hero-image"
-          />
+          <div className="red-accent-line mx-auto"></div>
         </div>
 
         {/* Service Cards */}
         <div className="grid md:grid-cols-3 gap-6">
           {/* Online Course */}
           <div className="bg-white rounded-lg shadow-md overflow-hidden" data-testid="service-card-online-course">
+            <div className="h-48 overflow-hidden">
+              <img 
+                src="https://customer-assets.emergentagent.com/job_soccer-confidence-2/artifacts/ankijkat_WhatsApp%20Image%202026-01-08%20at%2017.56.53%20%282%29.jpeg"
+                alt="Online Course"
+                className="w-full h-full object-cover object-top"
+              />
+            </div>
             <div className="p-6">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-10 h-10 bg-[#D92323]/10 rounded flex items-center justify-center">
@@ -488,7 +483,7 @@ const ServicesSection = () => {
                   Online Course
                 </h3>
               </div>
-              <p className="text-gray-600 text-sm mb-6 flex items-start gap-2">
+              <p className="text-gray-600 text-sm mb-4 flex items-start gap-2">
                 <span className="text-[#D92323] mt-0.5">✓</span>
                 Self-paced video modules and player app for independent learning
               </p>
@@ -501,13 +496,19 @@ const ServicesSection = () => {
               style={{ fontFamily: 'Barlow Condensed, sans-serif' }}
               data-testid="service-cta-online-course"
             >
-              <BookOpen className="inline mr-2" size={18} />
               Online Course
             </a>
           </div>
 
           {/* Individual Mentorship */}
           <div className="bg-white rounded-lg shadow-md overflow-hidden" data-testid="service-card-mentorship">
+            <div className="h-48 overflow-hidden">
+              <img 
+                src="https://customer-assets.emergentagent.com/job_soccer-confidence-2/artifacts/kaw5p2xm_Screenshot%202025-06-17%20at%2017.01.28.png"
+                alt="Individual Mentorship"
+                className="w-full h-full object-cover object-center"
+              />
+            </div>
             <div className="p-6">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-10 h-10 bg-[#D92323]/10 rounded flex items-center justify-center">
@@ -517,7 +518,7 @@ const ServicesSection = () => {
                   Individual Mentorship
                 </h3>
               </div>
-              <p className="text-gray-600 text-sm mb-6 flex items-start gap-2">
+              <p className="text-gray-600 text-sm mb-4 flex items-start gap-2">
                 <span className="text-[#D92323] mt-0.5">✓</span>
                 1-to-1 coaching via Zoom with personal support for deeper development
               </p>
@@ -530,13 +531,19 @@ const ServicesSection = () => {
               style={{ fontFamily: 'Barlow Condensed, sans-serif' }}
               data-testid="service-cta-mentorship"
             >
-              <Users className="inline mr-2" size={18} />
               Individual Mentorship
             </a>
           </div>
 
           {/* The Ebook */}
           <div className="bg-white rounded-lg shadow-md overflow-hidden" data-testid="service-card-ebook">
+            <div className="h-48 overflow-hidden bg-[#2d2d2d] flex items-center justify-center">
+              <img 
+                src="https://customer-assets.emergentagent.com/job_soccer-confidence-2/artifacts/5391vyrw_Red%20and%20Black%20Male%20Life%20Coach%20Ebook%20Cover-3.png"
+                alt="The Ebook"
+                className="h-full object-contain"
+              />
+            </div>
             <div className="p-6">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-10 h-10 bg-[#D92323]/10 rounded flex items-center justify-center">
@@ -546,7 +553,7 @@ const ServicesSection = () => {
                   The Ebook
                 </h3>
               </div>
-              <p className="text-gray-600 text-sm mb-6 flex items-start gap-2">
+              <p className="text-gray-600 text-sm mb-4 flex items-start gap-2">
                 <span className="text-[#D92323] mt-0.5">✓</span>
                 In-depth guide with practical mindset strategies for players & parents
               </p>
@@ -559,7 +566,6 @@ const ServicesSection = () => {
               style={{ fontFamily: 'Barlow Condensed, sans-serif' }}
               data-testid="service-cta-ebook"
             >
-              <FileText className="inline mr-2" size={18} />
               The Ebook
             </a>
           </div>
