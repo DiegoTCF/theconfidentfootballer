@@ -471,7 +471,7 @@ const ServicesSection = () => {
               <img 
                 src="https://customer-assets.emergentagent.com/job_soccer-confidence-2/artifacts/ankijkat_WhatsApp%20Image%202026-01-08%20at%2017.56.53%20%282%29.jpeg"
                 alt="Online Course"
-                className="w-full h-full object-cover object-top"
+                className="w-full h-full object-cover object-center"
               />
             </div>
             <div className="p-6">
@@ -504,9 +504,9 @@ const ServicesSection = () => {
           <div className="bg-white rounded-lg shadow-md overflow-hidden" data-testid="service-card-mentorship">
             <div className="h-48 overflow-hidden">
               <img 
-                src="https://customer-assets.emergentagent.com/job_soccer-confidence-2/artifacts/kaw5p2xm_Screenshot%202025-06-17%20at%2017.01.28.png"
+                src="https://customer-assets.emergentagent.com/job_soccer-confidence-2/artifacts/myibs0gn_Frankie%20Tournament-3.png"
                 alt="Individual Mentorship"
-                className="w-full h-full object-cover object-center"
+                className="w-full h-full object-cover object-top"
               />
             </div>
             <div className="p-6">
