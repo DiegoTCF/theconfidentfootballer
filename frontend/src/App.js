@@ -242,6 +242,10 @@ const HeroSection = () => {
           data-testid="hero-banner"
         />
       </div>
+      {/* Divider */}
+      <div className="w-full">
+        <div className="h-1 bg-gradient-to-r from-transparent via-[#D92323] to-transparent"></div>
+      </div>
     </section>
   );
 };
