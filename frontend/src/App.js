@@ -630,51 +630,52 @@ const ServicesSection = () => {
 // Diego Section
 const DiegoSection = () => {
   return (
-    <section id="diego" className="py-20 md:py-32 px-6 lg:px-12 bg-white relative overflow-hidden" data-testid="diego-section">
-      {/* Watermark */}
-      <span className="watermark-number absolute -right-10 top-0">02</span>
-      
-      <div className="max-w-7xl mx-auto">
-        <div className="grid md:grid-cols-2 gap-12 lg:gap-20 items-center">
+    <section id="diego" className="py-20 md:py-28 px-6 lg:px-12 bg-[#F5F5F5] relative overflow-hidden" data-testid="diego-section">
+      <div className="max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Image */}
           <div className="relative order-2 md:order-1">
             <div className="relative">
               <img
                 src={DIEGO_IMAGE}
                 alt="Diego - The Confident Footballer founder"
-                className="w-full h-[500px] object-cover"
+                className="w-full max-w-md mx-auto rounded-lg shadow-lg"
                 data-testid="diego-image"
               />
-              <div className="absolute -bottom-6 -right-6 bg-[#D92323] p-6 text-white">
-                <Target size={32} className="mb-2" />
-                <p className="font-bold uppercase" style={{ fontFamily: 'Barlow Condensed, sans-serif' }}>Mindset Specialist</p>
-              </div>
             </div>
           </div>
 
           {/* Content */}
           <div className="relative z-10 order-1 md:order-2">
-            <span className="text-sm font-medium tracking-widest uppercase text-[#D92323] mb-4 block" style={{ fontFamily: 'Barlow Condensed, sans-serif' }}>
-              Meet The Specialist
-            </span>
-            <h2 className="text-4xl md:text-5xl font-bold tracking-tight uppercase text-[#0A0A0A] mb-6" style={{ fontFamily: 'Barlow Condensed, sans-serif' }}>
-              Diego
+            <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-[#0A0A0A] mb-6" style={{ fontFamily: 'Barlow Condensed, sans-serif' }}>
+              Hi, I'm <span className="text-[#D92323]">Diego</span>, the creator of The Confident Footballer.
             </h2>
             <div className="red-accent-line mb-6"></div>
-            <p className="text-base md:text-lg leading-relaxed text-gray-600 mb-6">
-              Diego is the founder and lead mindset coach at The Confident Footballer. With years of experience working with young athletes, he understands the unique mental challenges that young footballers face.
+            <p className="text-base md:text-lg leading-relaxed text-gray-700 mb-6">
+              I understand what you're going through because I've lived it from three perspectives:
             </p>
-            <p className="text-base md:text-lg leading-relaxed text-gray-600 mb-6">
-              His passion is helping players unlock their potential by developing a winning mindset. Diego combines sports psychology techniques with practical, easy-to-apply strategies that produce real results on the pitch.
-            </p>
-            <p className="text-base md:text-lg leading-relaxed text-gray-600 mb-8">
-              Whether through the online course, personal mentorship sessions, or his comprehensive ebook, Diego's mission is to help every young player develop the confidence, consistency, and courage they need to succeed.
+            <ul className="space-y-4 mb-6">
+              <li className="flex items-start gap-3 text-gray-700">
+                <span className="text-[#D92323] font-bold mt-1">•</span>
+                <span>As a <strong>parent</strong> watching my son struggle despite his talent</span>
+              </li>
+              <li className="flex items-start gap-3 text-gray-700">
+                <span className="text-[#D92323] font-bold mt-1">•</span>
+                <span>As a <strong>football coach for 15+ years</strong>, who's worked at academies like Tottenham and West Ham</span>
+              </li>
+              <li className="flex items-start gap-3 text-gray-700">
+                <span className="text-[#D92323] font-bold mt-1">•</span>
+                <span>As a <strong>mindset coach</strong> who's studied and developed a system that actually works in real life... not just in books</span>
+              </li>
+            </ul>
+            <p className="text-base md:text-lg leading-relaxed text-gray-700 mb-8 font-medium">
+              My mission is simple: to make sure talented young players don't get held back from reaching their full potential.
             </p>
             <a
               href="https://forms.gle/f18mTdsL4seLQwcE7"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-secondary inline-flex items-center gap-2"
+              className="btn-primary inline-flex items-center gap-2"
               data-testid="diego-cta"
             >
               Work With Diego <ArrowRight size={18} />
