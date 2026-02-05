@@ -111,6 +111,20 @@ const TESTIMONIALS = [
     parent: "Rehmat Adenwala",
     image: "https://customer-assets.emergentagent.com/job_soccer-confidence-2/artifacts/tvzvlkdp_WhatsApp%20Image%202025-09-26%20at%2011.22.17.jpg",
     imagePosition: "center"
+  },
+  {
+    id: 10,
+    player: "Jaxson",
+    quote: "Jax's performance has been amazing, and this is down to the fact that since he's been using what he's learned with you and putting that into practice, it's helping him in every aspect.",
+    parent: "Daniella Barlow",
+    image: "https://customer-assets.emergentagent.com/job_soccer-confidence-2/artifacts/ymoym248_6.png"
+  },
+  {
+    id: 11,
+    player: "Zach",
+    quote: "Since finishing the programme three months ago, Zach is in a really good place. In his last 15 performances, there has only been one bad day. The behaviours are still the focus, and the father–son relationship is better than ever. We are seeing a level of consistency that wasn't there before.",
+    parent: "Mark Hatfull",
+    image: "https://customer-assets.emergentagent.com/job_soccer-confidence-2/artifacts/2r1cwr2i_5.png"
   }
 ];
 
