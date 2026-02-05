@@ -632,9 +632,26 @@ const DiegoSection = () => {
   return (
     <section id="diego" className="py-20 md:py-28 px-6 lg:px-12 bg-[#F5F5F5] relative overflow-hidden" data-testid="diego-section">
       <div className="max-w-6xl mx-auto">
+        {/* Mobile Layout - Photo with overlay title */}
+        <div className="md:hidden mb-8">
+          <div className="relative">
+            <img
+              src={DIEGO_IMAGE}
+              alt="Diego - The Confident Footballer founder"
+              className="w-full rounded-lg shadow-lg"
+            />
+            {/* Overlay Title */}
+            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 via-black/70 to-transparent p-6 rounded-b-lg">
+              <h2 className="text-2xl font-bold tracking-tight text-white" style={{ fontFamily: 'Barlow Condensed, sans-serif' }}>
+                Hi, I'm <span className="text-[#D92323]">Diego</span>, the creator of The Confident Footballer.
+              </h2>
+            </div>
+          </div>
+        </div>
+
         <div className="grid md:grid-cols-2 gap-12 lg:gap-16 items-center">
-          {/* Image */}
-          <div className="relative order-2 md:order-1">
+          {/* Image - Desktop Only */}
+          <div className="relative hidden md:block order-2 md:order-1">
             <div className="relative">
               <img
                 src={DIEGO_IMAGE}
@@ -647,7 +664,8 @@ const DiegoSection = () => {
 
           {/* Content */}
           <div className="relative z-10 order-1 md:order-2">
-            <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-[#0A0A0A] mb-6" style={{ fontFamily: 'Barlow Condensed, sans-serif' }}>
+            {/* Desktop Title */}
+            <h2 className="hidden md:block text-3xl md:text-4xl font-bold tracking-tight text-[#0A0A0A] mb-6" style={{ fontFamily: 'Barlow Condensed, sans-serif' }}>
               Hi, I'm <span className="text-[#D92323]">Diego</span>, the creator of The Confident Footballer.
             </h2>
             <div className="red-accent-line mb-6"></div>
