@@ -587,43 +587,7 @@ const TestimonialsSection = () => {
   );
 };
 
-// FAQ Section
-const FAQSection = () => {
-  return (
-    <section id="faq" className="py-20 md:py-32 px-6 lg:px-12 bg-[#F5F5F5]" data-testid="faq-section">
-      <div className="max-w-4xl mx-auto">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <span className="text-sm font-medium tracking-widest uppercase text-[#D92323] mb-4 block" style={{ fontFamily: 'Barlow Condensed, sans-serif' }}>
-            Frequently Asked Questions
-          </span>
-          <h2 className="text-4xl md:text-5xl font-bold tracking-tight uppercase text-[#0A0A0A] mb-6" style={{ fontFamily: 'Barlow Condensed, sans-serif' }}>
-            Got <span className="text-[#D92323]">Questions?</span>
-          </h2>
-          <div className="red-accent-line mx-auto"></div>
-        </div>
-
-        {/* FAQ Accordion */}
-        <Accordion type="single" collapsible className="space-y-4">
-          {FAQ_DATA.map((faq, index) => (
-            <AccordionItem key={index} value={`item-${index}`} className="bg-white border border-gray-200 rounded-lg overflow-hidden">
-              <AccordionTrigger className="px-6 py-4 text-left hover:bg-gray-50 [&[data-state=open]]:bg-gray-50">
-                <span className="font-semibold text-[#0A0A0A] text-base" style={{ fontFamily: 'Barlow Condensed, sans-serif' }}>
-                  {faq.question}
-                </span>
-              </AccordionTrigger>
-              <AccordionContent className="px-6 pb-4">
-                <div className="text-gray-600 leading-relaxed whitespace-pre-line">
-                  {faq.answer}
-                </div>
-              </AccordionContent>
-            </AccordionItem>
-          ))}
-        </Accordion>
-      </div>
-    </section>
-  );
-};
+// FAQ Section (duplicate removed)
 
 // FAQ Section
 const FAQSection = () => {
