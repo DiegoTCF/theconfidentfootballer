@@ -59,21 +59,21 @@ const TESTIMONIALS = [
     player: "Pedro",
     quote: "Diego has helped Pedro's confidence and resilience to overcome setbacks and challenges since he was 11 years old. Thank you for everything!",
     parent: "Michael Araujo Alves",
-    image: "https://images.unsplash.com/photo-1579952363873-27f3bade9f55?w=600&fit=crop"
+    image: "https://customer-assets.emergentagent.com/job_soccer-confidence-2/artifacts/imahmx4a_PHOTO-2025-12-19-10-26-57.jpg"
   },
   {
     id: 4,
     player: "Jude",
     quote: "My son grew in confidence after the sessions with Diego.",
     parent: "Jamie Holloway",
-    image: "https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=600&fit=crop"
+    image: "https://customer-assets.emergentagent.com/job_soccer-confidence-2/artifacts/xpduwds6_The%20Confident%20Footballer-7.png"
   },
   {
     id: 5,
     player: "Ralph",
     quote: "Ralph has tools he can use and refer to. It's helped us as parents know how to help him too.",
     parent: "Becky",
-    image: "https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?w=600&fit=crop"
+    image: "https://customer-assets.emergentagent.com/job_soccer-confidence-2/artifacts/5a626r70_PHOTO-2025-04-20-09-08-45.jpg"
   },
   {
     id: 6,
@@ -94,7 +94,7 @@ const TESTIMONIALS = [
     player: "Freddie",
     quote: "Working with Diego has been fantastic for Freddie. The pre-match process and post-match feedback are invaluable. The Confident Footballer has become a key part of Freddie's program—one I would highly recommend.",
     parent: "Danny Clarke",
-    image: "https://images.unsplash.com/photo-1606925797300-0b35e9d1794e?w=600&fit=crop"
+    image: "https://customer-assets.emergentagent.com/job_soccer-confidence-2/artifacts/t45ps1j2_The%20Confident%20Footballer-6.png"
   },
   {
     id: 9,
